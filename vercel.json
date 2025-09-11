@@ -1,0 +1,113 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/api/sitemap"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/api/robots"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/articles/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=0"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/blog/:slug",
+      "destination": "/articles/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/category/:category",
+      "destination": "/:category",
+      "permanent": true
+    }
+  ],
+  "functions": {
+    "app/articles/[slug]/page.tsx": {
+      "maxDuration": 30
+    },
+    "app/sitemap.ts": {
+      "maxDuration": 10
+    },
+    "app/robots.ts": {
+      "maxDuration": 5
+    }
+  },
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": "https://rv-promax.com",
+    "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID": "GA_MEASUREMENT_ID",
+    "NEXT_PUBLIC_GOOGLE_ADSENSE_ID": "ca-pub-YOUR_PUBLISHER_ID"
+  }
+}
+
+
+
+
+
+
+
+

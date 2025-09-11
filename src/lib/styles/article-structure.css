@@ -1,0 +1,1273 @@
+/* RV-Pro Max Article Styles - Complete Implementation */
+
+/* Ensure light background for all article content */
+html, body {
+  background: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+/* Force light theme for all article elements */
+.article-content,
+.article-content *,
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6,
+.article-content p,
+.article-content div,
+.article-content section {
+  background: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+/* Main article container */
+.article-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1f2937;
+  background: #ffffff !important;
+}
+
+/* Article header with project-consistent gradient */
+.article-content .main-title {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #0891b2 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin: 0 0 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-content .main-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Subtitle styling */
+.article-content .subtitle {
+  font-size: 1.8rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  font-style: italic;
+  background: linear-gradient(90deg, #f3f4f6, #e5e7eb);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #2563eb;
+}
+
+/* Main headings with project-consistent styling */
+.article-content .section-heading {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 1.25rem 1.75rem;
+  border-radius: 12px;
+  margin: 3rem 0 1.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+  position: relative;
+  border-left: 4px solid #0891b2;
+}
+
+.article-content .section-heading::before {
+  content: "💧";
+  margin-right: 0.75rem;
+  font-size: 1.3em;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* Sub-headings with consistent styling */
+.article-content .subsection-heading {
+  color: #1e40af;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), rgba(8, 145, 178, 0.05));
+  border-left: 4px solid #2563eb;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+.article-content .subsection-heading::before {
+  content: "▶";
+  color: #2563eb;
+  margin-right: 0.5rem;
+  font-size: 0.8em;
+}
+
+/* Paragraphs with improved readability */
+.article-content p {
+  margin: 1.5rem 0;
+  color: #374151;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Article paragraph styling */
+.article-content .article-paragraph {
+  margin: 1.5rem 0;
+  color: #374151;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  background: #ffffff !important;
+}
+
+/* Additional missing classes - CTA link styling moved below */
+
+/* FAQ question and answer styling */
+.article-content .faq-question {
+  color: #1e40af;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  padding-left: 1rem;
+  position: relative;
+  background: #ffffff !important;
+}
+
+.article-content .faq-question::before {
+  content: "❓";
+  position: absolute;
+  left: -0.5rem;
+  top: 0;
+  color: #2563eb;
+  font-size: 0.9em;
+}
+
+.article-content .faq-answer {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 3px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+/* Product recommendation styling */
+.article-content .product-recommendation {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-content .product-recommendation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.article-content .product-recommendation h3 {
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.article-content .product-recommendation p {
+  margin: 1rem 0;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Additional essential missing styles */
+.article-content h1 {
+  color: #1f2937;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  line-height: 1.2;
+}
+
+.article-content h2 {
+  color: #1e40af;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1.5rem 0;
+  line-height: 1.3;
+}
+
+.article-content h3 {
+  color: #1e40af;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  line-height: 1.4;
+}
+
+.article-content h4 {
+  color: #374151;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.article-content h5 {
+  color: #4b5563;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.article-content h6 {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+/* Ensure all text elements have proper background */
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6,
+.article-content p,
+.article-content div,
+.article-content span,
+.article-content strong,
+.article-content em {
+  background: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+/* Category page title styling - consistent with project theme */
+.category-page-title {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #0891b2 100%);
+  color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  margin: 0 0 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.category-page-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+/* Category page description styling */
+.category-page-description {
+  font-size: 1.2rem;
+  color: #6b7280;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  max-width: 48rem;
+  background: linear-gradient(90deg, #f3f4f6, #e5e7eb);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #2563eb;
+  font-style: italic;
+}
+
+/* Override for specific styled elements */
+.article-content .main-title {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #0891b2 100%) !important;
+  color: white !important;
+}
+
+.article-content .section-heading {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: white !important;
+}
+
+.article-content .subtitle {
+  color: #6b7280 !important;
+  background: linear-gradient(90deg, #f3f4f6, #e5e7eb) !important;
+}
+
+/* Introduction paragraph with special styling */
+.article-content p:first-of-type {
+  font-size: 1.2rem;
+  color: #1f2937;
+  font-weight: 500;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid #2563eb;
+  margin: 2rem 0;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
+}
+
+/* Lists with modern, consistent styling */
+.article-content ul,
+.article-content ol {
+  margin: 1.5rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.article-content li {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #2563eb;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+.article-content li:hover {
+  background: #f1f5f9;
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+}
+
+.article-content ul li::before {
+  content: "✓";
+  color: #2563eb;
+  font-weight: bold;
+  margin-right: 0.75rem;
+  font-size: 1.1em;
+}
+
+.article-content ol {
+  counter-reset: item;
+}
+
+.article-content ol li {
+  counter-increment: item;
+}
+
+.article-content ol li::before {
+  content: counter(item) ".";
+  color: #2563eb;
+  font-weight: bold;
+  margin-right: 0.75rem;
+  font-size: 1.1em;
+}
+
+/* Tables with project-consistent design */
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.article-content th {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 1.25rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.article-content td {
+  padding: 1.25rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+  transition: background-color 0.2s ease;
+}
+
+.article-content tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.article-content tr:hover {
+  background: #f1f5f9;
+}
+
+.article-content tr:hover td {
+  background: transparent;
+}
+
+/* Links with consistent project styling */
+.article-content a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0;
+}
+
+.article-content a:hover {
+  color: #1d4ed8;
+  border-bottom-color: #2563eb;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), transparent);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Special styling for Amazon links in article content */
+.article-content a[href*="amazon.com"],
+a[href*="amazon.com"] {
+  display: inline-block !important;
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  color: white !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border: none !important;
+  margin: 0.5rem 0 !important;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3) !important;
+  transition: all 0.3s ease !important;
+  transform: translateY(0) !important;
+}
+
+.article-content a[href*="amazon.com"]:hover,
+a[href*="amazon.com"]:hover {
+  background: linear-gradient(135deg, #ea580c, #dc2626) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4) !important;
+  color: white !important;
+}
+
+.article-content a[href*="amazon.com"]::before,
+a[href*="amazon.com"]::before {
+  content: "🛒 " !important;
+  margin-right: 0.5rem !important;
+}
+
+/* Additional Amazon button variants */
+.article-content a[href*="amazon"],
+a[href*="amazon"] {
+  display: inline-block !important;
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  color: white !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border: none !important;
+  margin: 0.5rem 0 !important;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3) !important;
+  transition: all 0.3s ease !important;
+  transform: translateY(0) !important;
+}
+
+.article-content a[href*="amazon"]:hover,
+a[href*="amazon"]:hover {
+  background: linear-gradient(135deg, #ea580c, #dc2626) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4) !important;
+  color: white !important;
+}
+
+.article-content a[href*="amazon"]::before,
+a[href*="amazon"]::before {
+  content: "🛒 " !important;
+  margin-right: 0.5rem !important;
+}
+
+/* CTA link styling for Amazon buttons */
+.article-content .cta-link {
+  display: inline-block !important;
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  color: white !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border: none !important;
+  margin: 0.5rem 0 !important;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3) !important;
+  transition: all 0.3s ease !important;
+  transform: translateY(0) !important;
+}
+
+.article-content .cta-link:hover {
+  background: linear-gradient(135deg, #ea580c, #dc2626) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4) !important;
+  color: white !important;
+}
+
+.article-content .cta-link::before {
+  content: "🛒 " !important;
+  margin-right: 0.5rem !important;
+}
+
+/* Product recommendations section */
+.article-content h3.top-products {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+  padding: 1.25rem 1.75rem;
+  border-radius: 12px;
+  margin: 2.5rem 0 1.5rem 0;
+  font-size: 1.5rem;
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.25);
+  border-left: 4px solid #10b981;
+}
+
+.article-content h3.top-products::before {
+  content: "🏆";
+  margin-right: 0.75rem;
+  font-size: 1.2em;
+}
+
+/* FAQ section styling */
+.article-content h2.faq-section {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+  padding: 1.25rem 1.75rem;
+  border-radius: 12px;
+  margin: 3rem 0 1.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.25);
+  border-left: 4px solid #f87171;
+}
+
+.article-content h2.faq-section::before {
+  content: "❓";
+  margin-right: 0.75rem;
+  font-size: 1.2em;
+}
+
+/* Call to action section */
+.article-content h2.final-thoughts {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  padding: 1.25rem 1.75rem;
+  border-radius: 12px;
+  margin: 3rem 0 1.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.25);
+  border-left: 4px solid #a78bfa;
+}
+
+.article-content h2.final-thoughts::before {
+  content: "🎯";
+  margin-right: 0.75rem;
+  font-size: 1.2em;
+}
+
+/* Horizontal rules with project styling */
+.article-content hr {
+  border: none;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #0891b2, #2563eb);
+  margin: 4rem 0;
+  border-radius: 2px;
+  position: relative;
+}
+
+.article-content hr::after {
+  content: "🚐";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1.2em;
+}
+
+/* Code styling with project theme */
+.article-content code {
+  background: #f1f5f9;
+  color: #dc2626;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  border: 1px solid #e2e8f0;
+  font-weight: 500;
+}
+
+/* Blockquotes with modern design */
+.article-content blockquote {
+  border-left: 5px solid #2563eb;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.08), rgba(8, 145, 178, 0.05));
+  padding: 2rem;
+  margin: 2.5rem 0;
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  color: #4b5563;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
+}
+
+.article-content blockquote::before {
+  content: "\201C";
+  font-size: 4rem;
+  color: #2563eb;
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+/* Affiliate disclosure styling */
+.article-content p.affiliate-disclosure {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border: 2px solid #f59e0b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #92400e;
+  margin: 2.5rem 0;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+}
+
+/* Images with consistent styling */
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+  border: 1px solid #e5e7eb;
+}
+
+/* Article Introduction */
+.article-intro {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-left: 4px solid #3b82f6;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.article-intro p {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+}
+
+/* Expert Tips and Callouts */
+.expert-tip {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expert-tip h4 {
+  color: #92400e;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.expert-tip p {
+  margin: 0;
+  color: #78350f;
+  line-height: 1.5;
+}
+
+/* Warning Callout */
+.expert-tip.warning {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+.expert-tip.warning h4 {
+  color: #991b1b;
+}
+
+.expert-tip.warning p {
+  color: #7f1d1d;
+}
+
+/* Section Dividers */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #e5e7eb 50%, transparent 100%);
+  margin: 3rem 0;
+}
+
+/* Improved Table Styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background: #f8fafc;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: top;
+}
+
+tr:hover {
+  background: #f9fafb;
+}
+
+/* Product Section Improvements */
+.product-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.product-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.product-item h3 {
+  color: #1f2937;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+}
+
+.product-item p {
+  margin: 0.5rem 0;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Amazon Link Styling - Consolidated above */
+
+/* CTA Button Styling */
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 1rem 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Product Recommendation Cards */
+.product-recommendation {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-recommendation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-recommendation h3 {
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.product-recommendation p {
+  margin: 1rem 0;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Contaminant List Styling */
+.contaminant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.contaminant-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.contaminant-item:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Filtration Step Cards */
+.filtration-step {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  border: 1px solid #93c5fd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.factor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.factor-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.factor-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.factor-item h4 {
+  color: #1f2937;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.factor-item p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Setup Steps */
+.setup-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.setup-step {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.step-number {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #3b82f6;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Maintenance Grid */
+.maintenance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.maintenance-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.maintenance-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.maintenance-item h4 {
+  color: #1f2937;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.maintenance-item p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Enhanced Article Cards */
+.article-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Category Buttons */
+.category-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.category-button:hover {
+  transform: scale(1.02);
+}
+
+.category-button:active {
+  transform: scale(0.98);
+}
+
+/* Loading States */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Line Clamp Utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .article-content {
+    padding: 1rem;
+  }
+  
+  .article-content h1:first-of-type {
+  font-size: 2rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .article-content h2 {
+    font-size: 1.5rem;
+    padding: 1rem 1.25rem;
+  }
+  
+.article-content h3 {
+    font-size: 1.25rem;
+    padding: 0.875rem 1rem;
+  }
+  
+  .article-content table {
+    font-size: 0.9rem;
+  }
+  
+  .article-content th,
+  .article-content td {
+    padding: 0.875rem 0.75rem;
+  }
+  
+  .article-content li {
+    padding: 0.875rem 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .article-content {
+    max-width: none;
+    padding: 0;
+  }
+  
+  .article-content h1:first-of-type,
+  .article-content h2,
+  .article-content h3 {
+    background: none !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+  
+  .article-content a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+}
+
+/* Additional Article Structure Improvements */
+.article-content {
+  line-height: 1.8;
+  color: #374151;
+  max-width: none;
+}
+
+.article-content p {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.article-content strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Responsive Grid Utilities */
+.articles-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (min-width: 768px) {
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .articles-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.category-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Focus styles */
+.focus-visible {
+  outline: none;
+  ring: 2px solid #3b82f6;
+  ring-offset: 2px;
+}
+
+/* Smooth scroll behavior */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Selection styles */
+::selection {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break {
+    page-break-before: always;
+  }
+  
+  .print-avoid-break {
+    page-break-inside: avoid;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Override dark mode for articles - force light theme */
+@media (prefers-color-scheme: dark) {
+  .article-content,
+  .article-content * {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+  }
+  
+  .article-content .main-title {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #0891b2 100%) !important;
+    color: white !important;
+  }
+  
+  .article-content .section-heading {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    color: white !important;
+  }
+  
+  .article-content .subtitle {
+    color: #6b7280 !important;
+    background: linear-gradient(90deg, #f3f4f6, #e5e7eb) !important;
+  }
+  
+  .article-content p {
+    color: #374151 !important;
+  }
+  
+  .article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5, .article-content h6 {
+    color: #1f2937 !important;
+  }
+  
+  .article-content a {
+    color: #2563eb !important;
+  }
+  
+  .article-content table {
+    background: white !important;
+  }
+  
+  .article-content th {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    color: white !important;
+  }
+  
+  .article-content td {
+    background: white !important;
+    color: #374151 !important;
+  }
+  
+  .article-content tr:nth-child(even) {
+    background: #f8fafc !important;
+  }
+  
+  .article-content li {
+    background: #f8fafc !important;
+    color: #374151 !important;
+  }
+  
+  .article-content blockquote {
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.08), rgba(8, 145, 178, 0.05)) !important;
+    color: #4b5563 !important;
+  }
+  
+  .article-content code {
+    background: #f1f5f9 !important;
+    color: #dc2626 !important;
+  }
+}
