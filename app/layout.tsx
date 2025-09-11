@@ -7,14 +7,14 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: {
-    default: 'RV & Camping Gear Pro - Expert Reviews & Best Amazon Deals 2025',
-    template: '%s | RV & Camping Gear Pro'
+    default: 'RV-Pro Max - Expert RV & Camping Gear Reviews | Best Amazon Deals 2025',
+    template: '%s | RV-Pro Max'
   },
-  description: 'Expert RV accessories and camping gear reviews. Trusted by 60K+ RV owners. Complete buying guides, professional installation tips & best Amazon deals.',
-  keywords: 'RV accessories, camping gear, RV reviews, amazon RV products, RV maintenance, camping equipment, RV accessories 2025, best RV gear',
-  authors: [{ name: 'RV & Camping Gear Pro Team', email: 'info@shonexxa.com' }],
-  creator: 'RV & Camping Gear Pro',
-  publisher: 'RV & Camping Gear Pro',
+  description: 'Discover the best RV accessories, camping gear, and outdoor equipment with expert reviews. Trusted by 60K+ RV owners. Complete buying guides, installation tips & exclusive Amazon deals.',
+  keywords: 'RV accessories, camping gear, RV reviews, amazon RV products, RV maintenance, camping equipment, RV accessories 2025, best RV gear, motorhome accessories, travel trailer parts, RV covers, camping supplies',
+  authors: [{ name: 'RV-Pro Max Team', email: 'info@shonexxa.com' }],
+  creator: 'RV-Pro Max',
+  publisher: 'RV-Pro Max',
   formatDetection: {
     email: false,
     address: false,
@@ -28,9 +28,9 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://rv-promax.com',
-    title: 'RV & Camping Gear Pro - Expert Reviews & Best Amazon Deals 2025',
-    description: 'Expert RV accessories and camping gear reviews. Trusted by 60K+ RV owners. Complete buying guides, professional installation tips & best Amazon deals.',
-    siteName: 'RV & Camping Gear Pro',
+    title: 'RV-Pro Max - Expert RV & Camping Gear Reviews | Best Amazon Deals 2025',
+    description: 'Discover the best RV accessories, camping gear, and outdoor equipment with expert reviews. Trusted by 60K+ RV owners. Complete buying guides, installation tips & exclusive Amazon deals.',
+    siteName: 'RV-Pro Max',
     images: [
       {
         url: '/og-image.jpg',
@@ -42,8 +42,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RV & Camping Gear Pro - Expert Reviews & Best Amazon Deals 2025',
-    description: 'Expert RV accessories and camping gear reviews. Trusted by 60K+ RV owners.',
+    title: 'RV-Pro Max - Expert RV & Camping Gear Reviews | Best Amazon Deals 2025',
+    description: 'Discover the best RV accessories, camping gear, and outdoor equipment with expert reviews. Trusted by 60K+ RV owners.',
     images: ['/og-image.jpg'],
   },
   robots: {
