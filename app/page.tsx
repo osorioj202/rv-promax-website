@@ -40,6 +40,7 @@ export default function Home() {
     if (titleLower.includes('mattress')) return '🛏️';
     if (titleLower.includes('outdoor')) return '🎯';
     if (titleLower.includes('covers')) return '🛡️';
+    if (titleLower.includes('general rv')) return '🏠';
     return '📦';
   };
 
@@ -235,6 +236,8 @@ export default function Home() {
               { href: '/towing-hitches', title: 'Towing Hitches', desc: 'Safe and reliable towing solutions', count: '8+ Guides' },
               { href: '/mattresses-bedding', title: 'Mattresses & Bedding', desc: 'Comfortable sleep solutions for your RV', count: '10+ Guides' },
               { href: '/outdoor-recreation', title: 'Outdoor Recreation', desc: 'Enhance your outdoor adventures', count: '15+ Guides' },
+              { href: '/general-rv', title: 'General RV', desc: 'Comprehensive RV guides and resources', count: '22+ Guides' },
+              { href: '/rv-covers-protection', title: 'RV Covers & Protection', desc: 'Protect your RV from the elements', count: '12+ Guides' },
             ].map((cat) => (
               <Link
                 key={cat.href}
