@@ -1,19 +1,5 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/sitemap.xml",
-      "dest": "/api/sitemap"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/api/robots"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
