@@ -4,74 +4,74 @@ import CategoryLayout from '@/components/CategoryLayout';
 export default function FurnitureInteriorPage() {
   const products = [
     {
-      name: "Zinus 6 Inch Green Tea Memory Foam RV Mattress",
-      url: "https://www.amazon.com/dp/B00BFCNFRM?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Thetford Aqua-Magic V RV Toilet",
+      url: "https://amzn.to/460vpe0",
       badge: "Best Seller",
       price: "$89.99",
-      description: "6-inch memory foam mattress with green tea infusion, perfect for RV short queen beds"
+      description: "High-quality RV toilet with foot pedal flush and water-saving design"
     },
     {
-      name: "Linenspa 8 Inch Memory Foam and Innerspring Hybrid RV Mattress",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Dometic 320 Series RV Toilet",
+      url: "https://amzn.to/4phwdTr",
       badge: "Top Rated",
-      price: "$149.99",
-      description: "Hybrid mattress combining memory foam comfort with innerspring support for RVs"
-    },
-    {
-      name: "LUCID 4 Inch Memory Foam RV Mattress Topper",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Best Value",
-      price: "$49.99",
-      description: "Memory foam topper to enhance existing RV mattress comfort and support"
-    },
-    {
-      name: "Flash Furniture RV Dinette Table with Storage",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Editor's Choice",
       price: "$199.99",
-      description: "Space-saving dinette table with built-in storage compartments for RVs"
+      description: "Premium RV toilet with porcelain bowl and residential-style flush"
     },
     {
-      name: "Furinno RV Folding Table with Storage",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Top Pick",
-      price: "$79.99",
-      description: "Lightweight folding table with storage shelf, perfect for RV dining and work"
-    },
-    {
-      name: "Mainstays RV Curtains Set of 2 Panels",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Camco RV Toilet Treatment",
+      url: "https://amzn.to/4gizy0g",
       badge: "Best Value",
-      price: "$24.99",
-      description: "Blackout curtains with grommets, designed specifically for RV windows"
-    },
-    {
-      name: "Camco RV Window Insulation Kit",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Professional",
-      price: "$39.95",
-      description: "Reflective window insulation kit to keep RV cool in summer and warm in winter"
-    },
-    {
-      name: "Command RV Hooks and Strips Value Pack",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Best Seller",
       price: "$12.99",
-      description: "Damage-free hanging solution for towels, coats, and accessories in RVs"
+      description: "Essential toilet treatment for holding tank odor control and waste breakdown"
     },
     {
-      name: "Simple Houseware RV Storage Organizer",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Valterra RV Toilet Paper Holder",
+      url: "https://amzn.to/47BTE3p",
+      badge: "Editor's Choice",
+      price: "$24.99",
+      description: "Space-saving toilet paper holder with built-in storage for RV bathrooms"
+    },
+    {
+      name: "Thetford RV Toilet Seal and Gasket Kit",
+      url: "https://amzn.to/4mpaFle",
       badge: "Top Pick",
       price: "$19.99",
-      description: "Over-the-door storage organizer with 6 pockets for RV bathroom and closet"
+      description: "Complete seal and gasket replacement kit for RV toilet maintenance"
+    },
+    {
+      name: "Dometic 310 Series RV Toilet",
+      url: "https://amzn.to/4nwWT0F",
+      badge: "Professional",
+      price: "$149.99",
+      description: "Compact RV toilet with foot pedal flush and easy installation"
+    },
+    {
+      name: "Camco RV Toilet Deodorant",
+      url: "https://amzn.to/3JYtsWU",
+      badge: "Best Seller",
+      price: "$8.99",
+      description: "Long-lasting toilet deodorant for fresh holding tank odor control"
+    },
+    {
+      name: "Valterra RV Toilet Flush Valve",
+      url: "https://amzn.to/41SbDyS",
+      badge: "Top Rated",
+      price: "$34.99",
+      description: "Replacement flush valve assembly for RV toilet repair and maintenance"
+    },
+    {
+      name: "Thetford RV Toilet Bowl Cleaner",
+      url: "https://amzn.to/3KijYFU",
+      badge: "Editor's Choice",
+      price: "$15.99",
+      description: "Specialized toilet bowl cleaner safe for RV holding tanks and seals"
     }
   ];
 
   return (
     <CategoryLayout
       title="Furniture & Interior"
-      description="Comfortable and functional furniture for your RV interior. Expert reviews, top-rated products, and best Amazon deals for creating a home-like RV experience."
+      description="Essential RV bathroom and interior accessories for comfort and functionality. Expert reviews, top-rated products, and best Amazon deals for maintaining your RV's interior systems."
       products={products}
     >
       <div className="text-center">
