@@ -4,67 +4,67 @@ import CategoryLayout from '@/components/CategoryLayout';
 export default function MaintenanceRepairPage() {
   const products = [
     {
-      name: "Dicor 501LSW-1 Self-Leveling Lap Sealant",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Camco RV Holding Tank Treatment",
+      url: "https://amzn.to/47HEslg",
       badge: "Best Seller",
       price: "$12.99",
-      description: "Professional-grade self-leveling sealant for RV roof and sidewall maintenance"
+      description: "Essential holding tank treatment for odor control and waste breakdown"
     },
     {
-      name: "Camco RV Water Pressure Regulator with Gauge",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Valterra RV Sewer Hose Support",
+      url: "https://amzn.to/4nyKGZv",
       badge: "Top Rated",
       price: "$24.99",
-      description: "Essential water pressure regulator to protect RV plumbing from high pressure"
+      description: "Support system for sewer hose to ensure proper drainage and prevent kinks"
     },
     {
-      name: "Valterra T58 Twist-On Waste Valve",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Thetford RV Toilet Paper",
+      url: "https://amzn.to/3If0f9E",
       badge: "Best Value",
       price: "$8.99",
-      description: "Durable waste valve replacement for RV holding tank systems"
-    },
-    {
-      name: "Camco RV Holding Tank Treatment Pods",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Editor's Choice",
-      price: "$15.99",
-      description: "Convenient holding tank treatment pods for odor control and waste breakdown"
-    },
-    {
-      name: "Thetford Aqua-Max RV Toilet Paper",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Top Pick",
-      price: "$9.99",
       description: "Specially designed toilet paper that dissolves quickly in RV holding tanks"
     },
     {
-      name: "Camco RV Sewer Hose Support Kit",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Professional",
-      price: "$29.99",
-      description: "Heavy-duty support system for RV sewer hoses with proper drainage slope"
-    },
-    {
-      name: "Valterra RV Fresh Water Hose",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Best Seller",
+      name: "Camco RV Water Pressure Regulator",
+      url: "https://amzn.to/41RtYvV",
+      badge: "Editor's Choice",
       price: "$19.99",
-      description: "Lead-free drinking water safe hose for RV fresh water connections"
+      description: "Essential water pressure regulator to protect RV plumbing from high pressure"
     },
     {
-      name: "Camco RV Leveling Blocks Set of 10",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Valterra RV Sewer Hose Kit",
+      url: "https://amzn.to/3I7apsX",
       badge: "Top Pick",
-      price: "$34.99",
-      description: "Heavy-duty leveling blocks for stabilizing RV on uneven ground"
+      price: "$39.99",
+      description: "Complete sewer hose kit with fittings and storage bag for RV waste disposal"
     },
     {
-      name: "Dicor RV Roof Coating Kit",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Thetford RV Holding Tank Deodorant",
+      url: "https://amzn.to/4gq6lkb",
       badge: "Professional",
-      price: "$89.99",
-      description: "Complete roof coating kit to protect and extend RV roof life"
+      price: "$15.99",
+      description: "Long-lasting holding tank deodorant for fresh odor control"
+    },
+    {
+      name: "Camco RV Water Filter",
+      url: "https://amzn.to/3IimNpR",
+      badge: "Best Seller",
+      price: "$29.99",
+      description: "High-capacity water filter system for clean, safe drinking water in RVs"
+    },
+    {
+      name: "Valterra RV Sewer Hose Elbow",
+      url: "https://amzn.to/46hO9Ev",
+      badge: "Top Pick",
+      price: "$12.99",
+      description: "Durable sewer hose elbow fitting for proper waste disposal connections"
+    },
+    {
+      name: "Thetford RV Toilet Seal",
+      url: "https://amzn.to/3IkxrfP",
+      badge: "Professional",
+      price: "$18.99",
+      description: "Replacement toilet seal for proper water retention and leak prevention"
     }
   ];
 
