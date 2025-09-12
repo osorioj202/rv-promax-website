@@ -5,63 +5,63 @@ export default function CampingGearPage() {
   const products = [
     {
       name: "Coleman Sundome 4-Person Tent",
-      url: "https://www.amazon.com/dp/B00000JZ0Q?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/47HCmC6",
       badge: "Best Seller",
       price: "$89.99",
       description: "Weather-resistant tent with easy setup, perfect for family camping"
     },
     {
       name: "Coleman 30°F Mummy Sleeping Bag",
-      url: "https://www.amazon.com/dp/B0009PUR5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4gsmtSo",
       badge: "Top Rated",
       price: "$29.99",
       description: "Lightweight, compressible sleeping bag rated for 30°F temperatures"
     },
     {
       name: "Coleman Classic Propane Stove",
-      url: "https://www.amazon.com/dp/B0009PUR5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/3JYVBNC",
       badge: "Best Seller",
       price: "$49.99",
       description: "Durable 2-burner propane stove perfect for camping"
     },
     {
       name: "Coleman LED Lantern with USB Charging",
-      url: "https://www.amazon.com/dp/B07QZQZQZQ?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4n4ps5Q",
       badge: "Top Rated",
       price: "$39.99",
       description: "Bright LED lantern with USB charging port for devices"
     },
     {
       name: "Coleman 2-Person Airbed",
-      url: "https://www.amazon.com/dp/B0009PUR5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4gixghG",
       badge: "Best Value",
       price: "$34.99",
       description: "Comfortable airbed with built-in pump for easy inflation"
     },
     {
       name: "Coleman 50-Quart Xtreme Cooler",
-      url: "https://www.amazon.com/dp/B0009PUR5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/42uNbnk",
       badge: "Top Pick",
       price: "$79.99",
       description: "High-performance cooler that keeps ice for up to 5 days"
     },
     {
       name: "Coleman Folding Camping Chair",
-      url: "https://www.amazon.com/dp/B07QZQZQZQ?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4mZ6EES",
       badge: "Top Rated",
       price: "$24.99",
       description: "Comfortable folding chair with cup holder and side table"
     },
     {
       name: "Coleman Portable Camping Table",
-      url: "https://www.amazon.com/dp/B07QZQZQZQ?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4meG3CK",
       badge: "Best Seller",
       price: "$44.99",
       description: "Lightweight, portable table perfect for camping meals"
     },
     {
       name: "Coleman 4-Person Cabin Tent with Instant Setup",
-      url: "https://www.amazon.com/dp/B07QZQZQZQ?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4n9sHJq",
       badge: "Premium",
       price: "$129.99",
       description: "Instant setup tent with pre-attached poles for quick assembly"
