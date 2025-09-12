@@ -11,60 +11,60 @@ export default function CampingGearPage() {
       description: "Weather-resistant tent with easy setup, perfect for family camping"
     },
     {
-      name: "REI Co-op Trailbreak 30 Sleeping Bag",
-      url: "https://www.amazon.com/dp/B07ZQZQZQZ?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Coleman 30°F Mummy Sleeping Bag",
+      url: "https://www.amazon.com/dp/B0009PUR5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
       badge: "Top Rated",
-      price: "$79.99",
+      price: "$29.99",
       description: "Lightweight, compressible sleeping bag rated for 30°F temperatures"
     },
     {
-      name: "Jetboil Flash Cooking System",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Premium",
-      price: "$119.95",
-      description: "Ultra-fast water boiling system for backpacking and camping"
-    },
-    {
-      name: "Black Diamond Spot Headlamp",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Editor's Choice",
-      price: "$39.95",
-      description: "Bright, reliable headlamp with multiple lighting modes"
-    },
-    {
-      name: "Therm-a-Rest Z-Lite Sleeping Pad",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Best Value",
-      price: "$44.95",
-      description: "Lightweight, durable foam sleeping pad for comfort and warmth"
-    },
-    {
-      name: "MSR PocketRocket 2 Stove",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Top Pick",
-      price: "$39.95",
-      description: "Compact, reliable backpacking stove with excellent fuel efficiency"
-    },
-    {
-      name: "Osprey Atmos AG 65 Backpack",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Professional",
-      price: "$249.95",
-      description: "Premium backpack with Anti-Gravity suspension system"
-    },
-    {
-      name: "Stanley Adventure Camp Cook Set",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Coleman Classic Propane Stove",
+      url: "https://www.amazon.com/dp/B0009PUR5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
       badge: "Best Seller",
-      price: "$24.99",
-      description: "Complete 2-person cook set with nesting cups and plates"
+      price: "$49.99",
+      description: "Durable 2-burner propane stove perfect for camping"
     },
     {
-      name: "Nemo Dagger 2P Tent",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Coleman LED Lantern with USB Charging",
+      url: "https://www.amazon.com/dp/B07QZQZQZQ?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      badge: "Top Rated",
+      price: "$39.99",
+      description: "Bright LED lantern with USB charging port for devices"
+    },
+    {
+      name: "Coleman 2-Person Airbed",
+      url: "https://www.amazon.com/dp/B0009PUR5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      badge: "Best Value",
+      price: "$34.99",
+      description: "Comfortable airbed with built-in pump for easy inflation"
+    },
+    {
+      name: "Coleman 50-Quart Xtreme Cooler",
+      url: "https://www.amazon.com/dp/B0009PUR5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      badge: "Top Pick",
+      price: "$79.99",
+      description: "High-performance cooler that keeps ice for up to 5 days"
+    },
+    {
+      name: "Coleman Folding Camping Chair",
+      url: "https://www.amazon.com/dp/B07QZQZQZQ?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      badge: "Top Rated",
+      price: "$24.99",
+      description: "Comfortable folding chair with cup holder and side table"
+    },
+    {
+      name: "Coleman Portable Camping Table",
+      url: "https://www.amazon.com/dp/B07QZQZQZQ?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      badge: "Best Seller",
+      price: "$44.99",
+      description: "Lightweight, portable table perfect for camping meals"
+    },
+    {
+      name: "Coleman 4-Person Cabin Tent with Instant Setup",
+      url: "https://www.amazon.com/dp/B07QZQZQZQ?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
       badge: "Premium",
-      price: "$399.95",
-      description: "Ultra-lightweight 2-person tent with excellent weather protection"
+      price: "$129.99",
+      description: "Instant setup tent with pre-attached poles for quick assembly"
     }
   ];
 
