@@ -5,66 +5,66 @@ export default function MattressesBeddingPage() {
   const products = [
     {
       name: "Zinus 6 Inch Green Tea Memory Foam RV Mattress",
-      url: "https://www.amazon.com/dp/B00Q7EPSHI?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4nylcvo",
       badge: "Best Seller",
       price: "$89.99",
       description: "CertiPUR-US certified memory foam with green tea extract, perfect for RV short queen beds"
     },
     {
-      name: "LUCID 4 Inch Gel Memory Foam Mattress Topper",
-      url: "https://www.amazon.com/dp/B01N6PRX0A?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Best Value",
-      price: "$49.99",
-      description: "Cooling gel-infused memory foam topper for temperature regulation and added comfort"
-    },
-    {
-      name: "Milliard Tri-Fold Foam Folding Mattress",
-      url: "https://www.amazon.com/dp/B00V3QXJ6O?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Top Pick",
-      price: "$79.99",
-      description: "Tri-fold design for versatile use and easy storage, ideal for RV beds and camping"
-    },
-    {
-      name: "Classic Brands Cool Gel Ventilated Memory Foam Mattress",
-      url: "https://www.amazon.com/dp/B00EINBSEW?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Linenspa 8 Inch Memory Foam and Innerspring Hybrid RV Mattress",
+      url: "https://amzn.to/4pjACVF",
       badge: "Top Rated",
       price: "$149.99",
-      description: "Ventilated gel memory foam for breathability and pressure relief, fits many RV bed sizes"
+      description: "Hybrid mattress combining memory foam comfort with innerspring support for RVs"
     },
     {
-      name: "Zinus Ultima Comfort Memory Foam Mattress (8-Inch)",
-      url: "https://www.amazon.com/dp/B00Q7EPSHI?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "LUCID 4 Inch Memory Foam RV Mattress Topper",
+      url: "https://amzn.to/3IaPMfu",
+      badge: "Best Value",
+      price: "$49.99",
+      description: "Memory foam topper to enhance existing RV mattress comfort and support"
+    },
+    {
+      name: "Sleep Innovations 4 Inch Memory Foam RV Mattress Topper",
+      url: "https://amzn.to/46hSfNb",
+      badge: "Top Pick",
+      price: "$39.99",
+      description: "Memory foam topper with cooling gel for temperature regulation and added comfort"
+    },
+    {
+      name: "Zinus 8 Inch Memory Foam RV Mattress",
+      url: "https://amzn.to/48ftFyW",
       badge: "Editor's Choice",
-      price: "$199.99",
+      price: "$119.99",
       description: "Multiple foam layers with green tea and charcoal infusion for enhanced comfort and support"
     },
     {
-      name: "Sleep Innovations 4-Inch Dual Layer Mattress Topper",
-      url: "https://www.amazon.com/dp/B00EINBSEW?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Linenspa 6 Inch Memory Foam RV Mattress",
+      url: "https://amzn.to/4meC1uc",
+      badge: "Best Seller",
+      price: "$79.99",
+      description: "CertiPUR-US certified memory foam mattress with bamboo charcoal infusion for odor control"
+    },
+    {
+      name: "LUCID 2 Inch Memory Foam RV Mattress Topper",
+      url: "https://amzn.to/4god127",
+      badge: "Top Pick",
+      price: "$29.99",
+      description: "Thin memory foam topper for subtle comfort enhancement without changing mattress height"
+    },
+    {
+      name: "Sleep Innovations 2 Inch Memory Foam RV Mattress Topper",
+      url: "https://amzn.to/463jLz5",
       badge: "Best Value",
-      price: "$69.99",
-      description: "Memory foam and fiberfill layers for softness and support, adds cushioning to firm mattresses"
-    },
-    {
-      name: "Milliard Memory Foam RV Mattress (6-Inch)",
-      url: "https://www.amazon.com/dp/B00V3QXJ6O?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Professional",
-      price: "$129.99",
-      description: "High-density memory foam designed specifically for RV beds with removable washable cover"
-    },
-    {
-      name: "Bedsure RV Bedding Set with Sheets and Pillowcases",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Complete Set",
-      price: "$39.99",
-      description: "Complete RV bedding set including sheets and pillowcases designed for RV bed sizes"
-    },
-    {
-      name: "SafeRest Premium Hypoallergenic Mattress Protector",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Essential",
       price: "$24.99",
-      description: "Waterproof and breathable mattress protector designed for RV use, prevents moisture damage"
+      description: "Affordable memory foam topper with cooling gel for improved sleep comfort"
+    },
+    {
+      name: "Zinus 4 Inch Memory Foam RV Mattress Topper",
+      url: "https://amzn.to/4nx7oRK",
+      badge: "Editor's Choice",
+      price: "$34.99",
+      description: "Medium-thickness memory foam topper with green tea extract for natural odor control"
     }
   ];
 
