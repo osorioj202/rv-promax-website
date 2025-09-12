@@ -5,63 +5,63 @@ export default function ElectricalElectronicsPage() {
   const products = [
     {
       name: "Renogy 100W 12V Monocrystalline Solar Panel",
-      url: "https://amzn.to/4mUK7Jq",
+      url: "https://amzn.to/3IkFkSt",
       badge: "Best Seller",
       price: "$99.99",
       description: "High-efficiency solar panel perfect for RV roof mounting and off-grid power"
     },
     {
       name: "Victron Energy SmartSolar MPPT 100/20 Charge Controller",
-      url: "https://amzn.to/4nx4tIM",
+      url: "https://amzn.to/3VL2SD4",
       badge: "Premium",
       price: "$149.95",
       description: "Advanced MPPT charge controller with Bluetooth monitoring and app control"
     },
     {
       name: "Battle Born LiFePO4 Deep Cycle Battery 100Ah",
-      url: "https://amzn.to/46dnBEA",
+      url: "https://amzn.to/4gjEHoN",
       badge: "Top Rated",
       price: "$899.99",
       description: "Lithium iron phosphate battery with 10+ year lifespan and 3000+ cycles"
     },
     {
       name: "Go Power! GP-SW3000-12 3000W Pure Sine Wave Inverter",
-      url: "https://amzn.to/4n1X705",
+      url: "https://amzn.to/4mdCtIS",
       badge: "Professional",
       price: "$399.99",
       description: "High-capacity pure sine wave inverter for sensitive electronics and appliances"
     },
     {
       name: "Blue Sea Systems 12V Circuit Breaker Panel",
-      url: "https://amzn.to/3JTLQ3j",
+      url: "https://amzn.to/4mk7kDV",
       badge: "Best Seller",
       price: "$89.99",
       description: "Professional-grade circuit breaker panel for safe electrical distribution"
     },
     {
       name: "Renogy 40A MPPT Solar Charge Controller",
-      url: "https://amzn.to/3Ia0DWY",
+      url: "https://amzn.to/48fo7V7",
       badge: "Top Pick",
       price: "$79.99",
       description: "Efficient MPPT charge controller for solar panel systems up to 500W"
     },
     {
       name: "Victron Energy Orion-TR Smart 12/24-15A DC-DC Charger",
-      url: "https://amzn.to/47Z6kld",
+      url: "https://amzn.to/42jYWwU",
       badge: "Premium",
       price: "$129.99",
       description: "Smart DC-DC charger with Bluetooth monitoring for dual battery systems"
     },
     {
       name: "Blue Sea Systems 12V USB Charger Socket",
-      url: "https://amzn.to/46nF2SV",
+      url: "https://amzn.to/4mU3JNQ",
       badge: "Best Value",
       price: "$24.99",
       description: "Dual USB charging socket with LED indicator for mobile devices"
     },
     {
       name: "Renogy 200W 12V Monocrystalline Solar Panel Kit",
-      url: "https://amzn.to/3Vfw7Of",
+      url: "https://amzn.to/4meRVEO",
       badge: "Editor's Choice",
       price: "$299.99",
       description: "Complete solar panel kit with charge controller and mounting hardware"
