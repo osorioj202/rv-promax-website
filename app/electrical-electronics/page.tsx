@@ -5,66 +5,66 @@ export default function ElectricalElectronicsPage() {
   const products = [
     {
       name: "Renogy 100W 12V Monocrystalline Solar Panel",
-      url: "https://www.amazon.com/dp/B00BFCNFRM?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4mUK7Jq",
       badge: "Best Seller",
       price: "$99.99",
       description: "High-efficiency solar panel perfect for RV roof mounting and off-grid power"
     },
     {
       name: "Victron Energy SmartSolar MPPT 100/20 Charge Controller",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4nx4tIM",
       badge: "Premium",
       price: "$149.95",
       description: "Advanced MPPT charge controller with Bluetooth monitoring and app control"
     },
     {
       name: "Battle Born LiFePO4 Deep Cycle Battery 100Ah",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/46dnBEA",
       badge: "Top Rated",
       price: "$899.99",
       description: "Lithium iron phosphate battery with 10+ year lifespan and 3000+ cycles"
     },
     {
       name: "Go Power! GP-SW3000-12 3000W Pure Sine Wave Inverter",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4n1X705",
       badge: "Professional",
       price: "$399.99",
       description: "High-capacity pure sine wave inverter for sensitive electronics and appliances"
     },
     {
-      name: "Victron Energy BMV-712 Smart Battery Monitor",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Editor's Choice",
-      price: "$179.95",
-      description: "Precision battery monitor with Bluetooth connectivity and detailed analytics"
-    },
-    {
-      name: "Renogy 2000W Pure Sine Wave Inverter",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Best Value",
-      price: "$199.99",
-      description: "Reliable 2000W inverter with built-in safety features and remote control"
-    },
-    {
       name: "Blue Sea Systems 12V Circuit Breaker Panel",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
-      badge: "Professional",
-      price: "$89.95",
-      description: "Marine-grade circuit breaker panel with 6 switches and LED indicators"
+      url: "https://amzn.to/3JTLQ3j",
+      badge: "Best Seller",
+      price: "$89.99",
+      description: "Professional-grade circuit breaker panel for safe electrical distribution"
     },
     {
-      name: "NOCO Genius G3500 3.5A Smart Battery Charger",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Renogy 40A MPPT Solar Charge Controller",
+      url: "https://amzn.to/3Ia0DWY",
       badge: "Top Pick",
-      price: "$49.95",
-      description: "Smart battery charger for AGM, gel, and lithium batteries with desulfation"
+      price: "$79.99",
+      description: "Efficient MPPT charge controller for solar panel systems up to 500W"
     },
     {
-      name: "Samlex PST-1500-12 Pure Sine Wave Inverter",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      name: "Victron Energy Orion-TR Smart 12/24-15A DC-DC Charger",
+      url: "https://amzn.to/47Z6kld",
       badge: "Premium",
+      price: "$129.99",
+      description: "Smart DC-DC charger with Bluetooth monitoring for dual battery systems"
+    },
+    {
+      name: "Blue Sea Systems 12V USB Charger Socket",
+      url: "https://amzn.to/46nF2SV",
+      badge: "Best Value",
+      price: "$24.99",
+      description: "Dual USB charging socket with LED indicator for mobile devices"
+    },
+    {
+      name: "Renogy 200W 12V Monocrystalline Solar Panel Kit",
+      url: "https://amzn.to/3Vfw7Of",
+      badge: "Editor's Choice",
       price: "$299.99",
-      description: "Compact 1500W pure sine wave inverter with advanced protection features"
+      description: "Complete solar panel kit with charge controller and mounting hardware"
     }
   ];
 
