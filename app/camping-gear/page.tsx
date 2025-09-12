@@ -5,66 +5,66 @@ export default function CampingGearPage() {
   const products = [
     {
       name: "Coleman Sundome 4-Person Tent",
-      url: "https://amzn.to/47HCmC6",
+      url: "https://amzn.to/3K46DB0",
       badge: "Best Seller",
       price: "$89.99",
       description: "Weather-resistant tent with easy setup, perfect for family camping"
     },
     {
       name: "Coleman 30°F Mummy Sleeping Bag",
-      url: "https://amzn.to/4gsmtSo",
+      url: "https://amzn.to/3IfdlUn",
       badge: "Top Rated",
       price: "$29.99",
       description: "Lightweight, compressible sleeping bag rated for 30°F temperatures"
     },
     {
-      name: "Coleman Classic Propane Stove",
-      url: "https://amzn.to/3JYVBNC",
+      name: "Jetboil Flash Cooking System",
+      url: "https://amzn.to/3VJBXaS",
       badge: "Best Seller",
-      price: "$49.99",
-      description: "Durable 2-burner propane stove perfect for camping"
+      price: "$119.95",
+      description: "Ultra-fast cooking system with integrated pot and burner for efficient camp cooking"
     },
     {
-      name: "Coleman LED Lantern with USB Charging",
-      url: "https://amzn.to/4n4ps5Q",
+      name: "Black Diamond Spot Headlamp",
+      url: "https://amzn.to/47G9pGD",
       badge: "Top Rated",
-      price: "$39.99",
-      description: "Bright LED lantern with USB charging port for devices"
+      price: "$39.95",
+      description: "Bright, lightweight headlamp with multiple lighting modes for hands-free illumination"
     },
     {
-      name: "Coleman 2-Person Airbed",
-      url: "https://amzn.to/4gixghG",
+      name: "Therm-a-Rest Z-Lite Sleeping Pad",
+      url: "https://amzn.to/46hudBH",
       badge: "Best Value",
-      price: "$34.99",
-      description: "Comfortable airbed with built-in pump for easy inflation"
+      price: "$44.95",
+      description: "Lightweight, closed-cell foam sleeping pad that provides excellent insulation and comfort"
     },
     {
-      name: "Coleman 50-Quart Xtreme Cooler",
-      url: "https://amzn.to/42uNbnk",
+      name: "MSR PocketRocket 2 Stove",
+      url: "https://amzn.to/3JTrNSy",
       badge: "Top Pick",
-      price: "$79.99",
-      description: "High-performance cooler that keeps ice for up to 5 days"
+      price: "$39.95",
+      description: "Ultra-lightweight, compact backpacking stove perfect for solo and duo adventures"
     },
     {
-      name: "Coleman Folding Camping Chair",
-      url: "https://amzn.to/4mZ6EES",
+      name: "Osprey Atmos AG 65 Backpack",
+      url: "https://amzn.to/3K0F1N9",
       badge: "Top Rated",
-      price: "$24.99",
-      description: "Comfortable folding chair with cup holder and side table"
+      price: "$249.95",
+      description: "Premium backpacking pack with Anti-Gravity suspension for maximum comfort on long hikes"
     },
     {
-      name: "Coleman Portable Camping Table",
-      url: "https://amzn.to/4meG3CK",
+      name: "Stanley Adventure Camp Cook Set",
+      url: "https://amzn.to/41RB5ED",
       badge: "Best Seller",
-      price: "$44.99",
-      description: "Lightweight, portable table perfect for camping meals"
+      price: "$24.99",
+      description: "Complete cook set with pots, pans, and utensils for efficient camp cooking"
     },
     {
-      name: "Coleman 4-Person Cabin Tent with Instant Setup",
-      url: "https://amzn.to/4n9sHJq",
+      name: "Nemo Dagger 2P Tent",
+      url: "https://amzn.to/4n2tThC",
       badge: "Premium",
-      price: "$129.99",
-      description: "Instant setup tent with pre-attached poles for quick assembly"
+      price: "$399.95",
+      description: "Ultra-lightweight, freestanding tent with excellent weather protection and spacious interior"
     }
   ];
 
