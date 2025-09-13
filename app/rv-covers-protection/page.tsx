@@ -5,63 +5,63 @@ export default function RVCoversProtectionPage() {
   const products = [
     {
       name: "Classic Accessories OverDrive PolyPro 3 RV Cover",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/3VfKamX",
       badge: "Best Seller",
       price: "$189.99",
       description: "Heavy-duty 3-layer polypropylene cover with UV protection and breathable fabric"
     },
     {
       name: "ADCO Designer Series SFS Aqua Shed RV Cover",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4n4FIno",
       badge: "Top Rated",
       price: "$299.99",
       description: "Premium 5-layer fabric with Aqua Shed technology for superior water resistance"
     },
     {
       name: "Camco RV Cover for Class A Motorhomes",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4pmZtrP",
       badge: "Best Value",
       price: "$149.99",
       description: "Durable polyester cover with reinforced corners and adjustable straps"
     },
     {
       name: "Classic Accessories OverDrive PolyPro 4 RV Cover",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/3JZcrMk",
       badge: "Editor's Choice",
       price: "$229.99",
       description: "4-layer polypropylene cover with enhanced UV protection and tear resistance"
     },
     {
       name: "ADCO RV Cover for Class C Motorhomes",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/46kqZxk",
       badge: "Professional",
       price: "$249.99",
       description: "Professional-grade cover with SFS Aqua Shed technology and reinforced seams"
     },
     {
       name: "Camco RV Cover for Travel Trailers",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/41PcArH",
       badge: "Top Pick",
       price: "$119.99",
       description: "Heavy-duty polyester cover with zippered panels for easy access to doors and compartments"
     },
     {
       name: "Classic Accessories OverDrive PolyPro 5 RV Cover",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4mW1ObD",
       badge: "Best Value",
       price: "$279.99",
       description: "5-layer polypropylene cover with maximum UV protection and weather resistance"
     },
     {
       name: "ADCO RV Cover for Fifth Wheels",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/46AOoMj",
       badge: "Professional",
       price: "$329.99",
       description: "Heavy-duty cover designed specifically for fifth wheel trailers with reinforced corners"
     },
     {
       name: "Camco RV Cover for Class B Motorhomes",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4nsao1z",
       badge: "Top Pick",
       price: "$89.99",
       description: "Compact cover for Class B motorhomes with breathable fabric and easy installation"
