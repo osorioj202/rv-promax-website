@@ -39,11 +39,11 @@ export default function FurnitureInteriorPage() {
       description: "Complete seal and gasket replacement kit for RV toilet maintenance"
     },
     {
-      name: "Dometic 320 Series Standard Height Toilet, Bone",
-      url: "https://amzn.to/3IkZw6Q",
+      name: "Dometic 310 Standard Toilet",
+      url: "https://amzn.to/46lb9Tq",
       badge: "Professional",
-      price: "$371.84",
-      description: "Full-size residential style toilet with deep ceramic bowl and efficient water usage"
+      price: "$246.07",
+      description: "Lightweight RV toilet with pressure-enhanced PowerFlush and slow-close seat cover"
     },
     {
       name: "Camco RV Toilet Deodorant",
