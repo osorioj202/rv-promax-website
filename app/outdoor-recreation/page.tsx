@@ -5,63 +5,63 @@ export default function OutdoorRecreationPage() {
   const products = [
     {
       name: "Coleman RoadTrip 285 Portable Propane Grill",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/46A2L3x",
       badge: "Best Seller",
       price: "$149.99",
       description: "Portable propane grill with 285 sq in cooking surface, perfect for RV outdoor cooking"
     },
     {
       name: "Eno DoubleNest Hammock with Atlas Straps",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/46fhVKc",
       badge: "Top Rated",
       price: "$79.99",
       description: "Lightweight parachute nylon hammock with heavy-duty suspension straps for relaxation"
     },
     {
       name: "Keter Portable Folding Camping Table",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4mduJqw",
       badge: "Best Value",
       price: "$39.99",
       description: "Foldable camping table with cup holders, perfect for RV outdoor dining and activities"
     },
     {
       name: "YETI Rambler 30 oz Tumbler with MagSlider Lid",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/46kJEJx",
       badge: "Editor's Choice",
       price: "$45.00",
       description: "Insulated stainless steel tumbler that keeps drinks cold for hours during outdoor adventures"
     },
     {
       name: "REI Co-op Trailbreak 30 Sleeping Bag",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/3IiI2Ie",
       badge: "Top Pick",
       price: "$79.99",
       description: "Lightweight, compressible sleeping bag rated for 30°F temperatures, ideal for camping"
     },
     {
       name: "Black Diamond Spot 350 Headlamp",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4nxL3Ub",
       badge: "Professional",
       price: "$39.95",
       description: "Bright LED headlamp with multiple lighting modes for hands-free outdoor activities"
     },
     {
       name: "Kelty Cosmic Down 20 Sleeping Bag",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4meNaLy",
       badge: "Best Value",
       price: "$89.99",
       description: "Down-filled sleeping bag with 20°F temperature rating and compressible design"
     },
     {
       name: "Coleman Sundome 4-Person Tent",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4mi4mQa",
       badge: "Best Seller",
       price: "$89.99",
       description: "Weather-resistant tent with easy setup, perfect for family camping adventures"
     },
     {
       name: "MSR PocketRocket 2 Stove",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4mc26da",
       badge: "Top Pick",
       price: "$44.95",
       description: "Ultra-lightweight backpacking stove with reliable performance for outdoor cooking"
