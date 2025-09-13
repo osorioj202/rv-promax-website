@@ -5,63 +5,63 @@ export default function GeneralRVPage() {
   const products = [
     {
       name: "Berkey Travel Water Filter System",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/462EQtl",
       badge: "Best Seller",
       price: "$249.99",
       description: "Portable water filtration system perfect for RV travel, removes 99.9% of contaminants"
     },
     {
       name: "Dometic Penguin II RV Air Conditioner",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/41M4osk",
       badge: "Top Rated",
       price: "$599.99",
       description: "High-efficiency 13,500 BTU RV air conditioner with digital thermostat control"
     },
     {
       name: "Dicor 501LSW-1 Self-Leveling Lap Sealant",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/3I9vmn4",
       badge: "Best Value",
       price: "$12.99",
       description: "Professional-grade self-leveling sealant for RV roof and sidewall maintenance"
     },
     {
       name: "Camco RV Water Pressure Regulator with Gauge",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4gpmZ3x",
       badge: "Editor's Choice",
       price: "$24.99",
       description: "Essential water pressure regulator to protect RV plumbing from high pressure damage"
     },
     {
       name: "Renogy 100W 12V Monocrystalline Solar Panel",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4gmgONi",
       badge: "Top Pick",
       price: "$99.99",
       description: "High-efficiency solar panel perfect for RV roof mounting and off-grid power"
     },
     {
       name: "Zinus 6 Inch Green Tea Memory Foam RV Mattress",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/48h8n3Z",
       badge: "Best Value",
       price: "$89.99",
       description: "CertiPUR-US certified memory foam mattress with green tea extract, perfect for RV beds"
     },
     {
       name: "Coleman RoadTrip 285 Portable Propane Grill",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4ns6aqL",
       badge: "Professional",
       price: "$149.99",
       description: "Portable propane grill with 285 sq in cooking surface, perfect for RV outdoor cooking"
     },
     {
       name: "Curt 17000 Class V Trailer Hitch",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4nxWvza",
       badge: "Top Pick",
       price: "$189.99",
       description: "Heavy-duty Class V hitch with 17,000 lb towing capacity and 1,700 lb tongue weight"
     },
     {
       name: "Classic Accessories OverDrive PolyPro 3 RV Cover",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4pjv8KC",
       badge: "Best Seller",
       price: "$189.99",
       description: "Heavy-duty 3-layer polypropylene cover with UV protection and breathable fabric"
