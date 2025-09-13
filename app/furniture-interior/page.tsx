@@ -40,7 +40,7 @@ export default function FurnitureInteriorPage() {
     },
     {
       name: "Dometic 310 Series RV Toilet",
-      url: "https://amzn.to/41N5HXV",
+      url: "https://amzn.to/4pm5TYf",
       badge: "Professional",
       price: "$149.99",
       description: "Compact RV toilet with foot pedal flush and easy installation"
