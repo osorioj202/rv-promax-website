@@ -5,63 +5,63 @@ export default function TowingHitchesPage() {
   const products = [
     {
       name: "Curt 17000 Class V Trailer Hitch",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4nteZkc",
       badge: "Best Seller",
       price: "$189.99",
       description: "Heavy-duty Class V hitch with 17,000 lb towing capacity and 1,700 lb tongue weight"
     },
     {
       name: "Reese Towpower 80073 Weight Distribution Hitch",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/3VReDYE",
       badge: "Top Rated",
       price: "$299.99",
       description: "Professional weight distribution hitch with 10,000 lb capacity and sway control"
     },
     {
       name: "Curt 4500 Class III Trailer Hitch",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/41PPqBs",
       badge: "Best Value",
       price: "$89.99",
       description: "Durable Class III hitch with 4,500 lb towing capacity and 450 lb tongue weight"
     },
     {
       name: "Reese Towpower 80073 Sway Control Kit",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/463x3LZ",
       badge: "Editor's Choice",
       price: "$149.99",
       description: "Dual cam sway control system for improved towing stability and safety"
     },
     {
       name: "Curt 16000 Class V Trailer Hitch",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/3K2DwOA",
       badge: "Professional",
       price: "$229.99",
       description: "Heavy-duty Class V hitch with 16,000 lb towing capacity and 1,600 lb tongue weight"
     },
     {
       name: "Reese Towpower 80073 Weight Distribution Kit",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/3HWw337",
       badge: "Top Pick",
       price: "$199.99",
       description: "Complete weight distribution kit with 8,000 lb capacity and sway control"
     },
     {
       name: "Curt 3500 Class III Trailer Hitch",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4phHUJT",
       badge: "Best Value",
       price: "$69.99",
       description: "Reliable Class III hitch with 3,500 lb towing capacity and 350 lb tongue weight"
     },
     {
       name: "Reese Towpower 80073 Sway Control Bar",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/4gmbSrX",
       badge: "Professional",
       price: "$79.99",
       description: "Heavy-duty sway control bar for improved towing stability and control"
     },
     {
       name: "Curt 5000 Class IV Trailer Hitch",
-      url: "https://www.amazon.com/dp/B001QW1B5E?tag=rvpromax-20&linkCode=ur2&linkId=rvpromax-20",
+      url: "https://amzn.to/47GXxEg",
       badge: "Top Pick",
       price: "$129.99",
       description: "Heavy-duty Class IV hitch with 5,000 lb towing capacity and 500 lb tongue weight"
