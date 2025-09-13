@@ -5,63 +5,63 @@ export default function MattressesBeddingPage() {
   const products = [
     {
       name: "Zinus 6 Inch Green Tea Memory Foam RV Mattress",
-      url: "https://amzn.to/4nylcvo",
+      url: "https://amzn.to/3KlJAle",
       badge: "Best Seller",
       price: "$89.99",
       description: "CertiPUR-US certified memory foam with green tea extract, perfect for RV short queen beds"
     },
     {
       name: "Linenspa 8 Inch Memory Foam and Innerspring Hybrid RV Mattress",
-      url: "https://amzn.to/4pjACVF",
+      url: "https://amzn.to/3Il7A7x",
       badge: "Top Rated",
       price: "$149.99",
       description: "Hybrid mattress combining memory foam comfort with innerspring support for RVs"
     },
     {
       name: "LUCID 4 Inch Memory Foam RV Mattress Topper",
-      url: "https://amzn.to/3IaPMfu",
+      url: "https://amzn.to/42uHB4l",
       badge: "Best Value",
       price: "$49.99",
       description: "Memory foam topper to enhance existing RV mattress comfort and support"
     },
     {
       name: "Sleep Innovations 4 Inch Memory Foam RV Mattress Topper",
-      url: "https://amzn.to/46hSfNb",
+      url: "https://amzn.to/4mYbqm7",
       badge: "Top Pick",
       price: "$39.99",
       description: "Memory foam topper with cooling gel for temperature regulation and added comfort"
     },
     {
       name: "Zinus 8 Inch Memory Foam RV Mattress",
-      url: "https://amzn.to/48ftFyW",
+      url: "https://amzn.to/41Tv7TP",
       badge: "Editor's Choice",
       price: "$119.99",
       description: "Multiple foam layers with green tea and charcoal infusion for enhanced comfort and support"
     },
     {
       name: "Linenspa 6 Inch Memory Foam RV Mattress",
-      url: "https://amzn.to/4meC1uc",
+      url: "https://amzn.to/41N0oaX",
       badge: "Best Seller",
       price: "$79.99",
       description: "CertiPUR-US certified memory foam mattress with bamboo charcoal infusion for odor control"
     },
     {
       name: "LUCID 2 Inch Memory Foam RV Mattress Topper",
-      url: "https://amzn.to/4god127",
+      url: "https://amzn.to/3IkptDy",
       badge: "Top Pick",
       price: "$29.99",
       description: "Thin memory foam topper for subtle comfort enhancement without changing mattress height"
     },
     {
       name: "Sleep Innovations 2 Inch Memory Foam RV Mattress Topper",
-      url: "https://amzn.to/463jLz5",
+      url: "https://amzn.to/4n29JUZ",
       badge: "Best Value",
       price: "$24.99",
       description: "Affordable memory foam topper with cooling gel for improved sleep comfort"
     },
     {
       name: "Zinus 4 Inch Memory Foam RV Mattress Topper",
-      url: "https://amzn.to/4nx7oRK",
+      url: "https://amzn.to/4nAhu4p",
       badge: "Editor's Choice",
       price: "$34.99",
       description: "Medium-thickness memory foam topper with green tea extract for natural odor control"
