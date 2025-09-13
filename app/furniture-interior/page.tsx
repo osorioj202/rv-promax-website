@@ -5,63 +5,63 @@ export default function FurnitureInteriorPage() {
   const products = [
     {
       name: "Thetford Aqua-Magic V RV Toilet",
-      url: "https://amzn.to/460vpe0",
+      url: "https://amzn.to/46iqvbb",
       badge: "Best Seller",
       price: "$89.99",
       description: "High-quality RV toilet with foot pedal flush and water-saving design"
     },
     {
       name: "Dometic 320 Series RV Toilet",
-      url: "https://amzn.to/4phwdTr",
+      url: "https://amzn.to/4nmuPgu",
       badge: "Top Rated",
       price: "$199.99",
       description: "Premium RV toilet with porcelain bowl and residential-style flush"
     },
     {
       name: "Camco RV Toilet Treatment",
-      url: "https://amzn.to/4gizy0g",
+      url: "https://amzn.to/3Vbate9",
       badge: "Best Value",
       price: "$12.99",
       description: "Essential toilet treatment for holding tank odor control and waste breakdown"
     },
     {
       name: "Valterra RV Toilet Paper Holder",
-      url: "https://amzn.to/47BTE3p",
+      url: "https://amzn.to/4n3Kodf",
       badge: "Editor's Choice",
       price: "$24.99",
       description: "Space-saving toilet paper holder with built-in storage for RV bathrooms"
     },
     {
       name: "Thetford RV Toilet Seal and Gasket Kit",
-      url: "https://amzn.to/4mpaFle",
+      url: "https://amzn.to/3Iff107",
       badge: "Top Pick",
       price: "$19.99",
       description: "Complete seal and gasket replacement kit for RV toilet maintenance"
     },
     {
       name: "Dometic 310 Series RV Toilet",
-      url: "https://amzn.to/4nwWT0F",
+      url: "https://amzn.to/4ns76LL",
       badge: "Professional",
       price: "$149.99",
       description: "Compact RV toilet with foot pedal flush and easy installation"
     },
     {
       name: "Camco RV Toilet Deodorant",
-      url: "https://amzn.to/3JYtsWU",
+      url: "https://amzn.to/3Vg9yJs",
       badge: "Best Seller",
       price: "$8.99",
       description: "Long-lasting toilet deodorant for fresh holding tank odor control"
     },
     {
       name: "Valterra RV Toilet Flush Valve",
-      url: "https://amzn.to/41SbDyS",
+      url: "https://amzn.to/42mypis",
       badge: "Top Rated",
       price: "$34.99",
       description: "Replacement flush valve assembly for RV toilet repair and maintenance"
     },
     {
       name: "Thetford RV Toilet Bowl Cleaner",
-      url: "https://amzn.to/3KijYFU",
+      url: "https://amzn.to/46AQ9ZW",
       badge: "Editor's Choice",
       price: "$15.99",
       description: "Specialized toilet bowl cleaner safe for RV holding tanks and seals"
