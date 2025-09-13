@@ -5,63 +5,63 @@ export default function MaintenanceRepairPage() {
   const products = [
     {
       name: "Camco RV Holding Tank Treatment",
-      url: "https://amzn.to/47HEslg",
+      url: "https://amzn.to/48fCc4W",
       badge: "Best Seller",
       price: "$12.99",
       description: "Essential holding tank treatment for odor control and waste breakdown"
     },
     {
       name: "Valterra RV Sewer Hose Support",
-      url: "https://amzn.to/4nyKGZv",
+      url: "https://amzn.to/4mplDHq",
       badge: "Top Rated",
       price: "$24.99",
       description: "Support system for sewer hose to ensure proper drainage and prevent kinks"
     },
     {
       name: "Thetford RV Toilet Paper",
-      url: "https://amzn.to/3If0f9E",
+      url: "https://amzn.to/3KlIA0s",
       badge: "Best Value",
       price: "$8.99",
       description: "Specially designed toilet paper that dissolves quickly in RV holding tanks"
     },
     {
       name: "Camco RV Water Pressure Regulator",
-      url: "https://amzn.to/41RtYvV",
+      url: "https://amzn.to/4maboGB",
       badge: "Editor's Choice",
       price: "$19.99",
       description: "Essential water pressure regulator to protect RV plumbing from high pressure"
     },
     {
       name: "Valterra RV Sewer Hose Kit",
-      url: "https://amzn.to/3I7apsX",
+      url: "https://amzn.to/42tkcQK",
       badge: "Top Pick",
       price: "$39.99",
       description: "Complete sewer hose kit with fittings and storage bag for RV waste disposal"
     },
     {
       name: "Thetford RV Holding Tank Deodorant",
-      url: "https://amzn.to/4gq6lkb",
+      url: "https://amzn.to/3Vbb5At",
       badge: "Professional",
       price: "$15.99",
       description: "Long-lasting holding tank deodorant for fresh odor control"
     },
     {
       name: "Camco RV Water Filter",
-      url: "https://amzn.to/3IimNpR",
+      url: "https://amzn.to/4ntjGuc",
       badge: "Best Seller",
       price: "$29.99",
       description: "High-capacity water filter system for clean, safe drinking water in RVs"
     },
     {
       name: "Valterra RV Sewer Hose Elbow",
-      url: "https://amzn.to/46hO9Ev",
+      url: "https://amzn.to/4n4CXT4",
       badge: "Top Pick",
       price: "$12.99",
       description: "Durable sewer hose elbow fitting for proper waste disposal connections"
     },
     {
       name: "Thetford RV Toilet Seal",
-      url: "https://amzn.to/3IkxrfP",
+      url: "https://amzn.to/42k0Cqc",
       badge: "Professional",
       price: "$18.99",
       description: "Replacement toilet seal for proper water retention and leak prevention"
