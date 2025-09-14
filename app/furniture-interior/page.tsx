@@ -58,13 +58,62 @@ export default function FurnitureInteriorPage() {
       badge: "Editor's Choice",
       price: "$15.99",
       description: "Specialized toilet bowl cleaner safe for RV holding tanks and seals"
+    },
+    {
+      name: "RecPro Charles Collection RV Sofa Bed",
+      url: "https://amzn.to/3IgSCQ3",
+      badge: "Premium",
+      price: "$1,199.99",
+      description: "72\" W x 34\" D x 36\" H with high-density foam cushions and durable faux leather upholstery. Converts easily into a queen-size bed with built-in storage under the seat."
+    },
+    {
+      name: "Thomas Payne RV Swivel Glide Recliner - Vinyl, Altoona",
+      url: "https://amzn.to/41RnvRE",
+      badge: "Premium",
+      price: "$499.99",
+      description: "30\" W x 32\" D x 40\" H with plush microfiber fabric and reinforced frame. 360-degree swivel, adjustable footrest, and lumbar support for luxury and flexibility."
+    },
+    {
+      name: "Camco Bamboo Folding RV Table with Carrying Case",
+      url: "https://amzn.to/4poSr5N",
+      badge: "Best Value",
+      price: "$89.99",
+      description: "24\" x 36\" surface with aluminum frame and weather-resistant tabletop. Lightweight, foldable, and easy to store for outdoor dining or extra workspace."
+    },
+    {
+      name: "RecPro 42\" Dinette Booth Set with Table and Leg",
+      url: "https://amzn.to/3IiYXdC",
+      badge: "Premium",
+      price: "$799.00",
+      description: "Table 48\" L x 30\" W with bench seats 42\" L. Solid wood with laminate finish, bench seats with storage compartments underneath, perfect for families or groups."
+    },
+    {
+      name: "KingCamp Oversize Lounge Chair Outdoor, Extra Large Padded Folding 5 Positions Chaise Tanning Chairs with Pillow & Side Table for Outside Sunbathing Beach Patio Pool Camping (Black)",
+      url: "https://amzn.to/4psYeaO",
+      badge: "Best Value",
+      price: "$69.99",
+      description: "22\" W x 24\" D x 36\" H with steel frame and breathable mesh fabric. Foldable, lightweight, includes cup holder for portable seating and outdoor relaxation."
+    },
+    {
+      name: "RV Mattress by Zinus Memory Foam",
+      url: "https://amzn.to/41Tv7TP",
+      badge: "Premium",
+      price: "$299.00",
+      description: "60\" W x 80\" L x 8\" H with CertiPUR-US certified memory foam. Pressure-relieving comfort with hypoallergenic cover for better sleep quality on the road."
+    },
+    {
+      name: "Furinno Simplistic End Table for RV",
+      url: "https://amzn.to/4psYir4",
+      badge: "Budget",
+      price: "$39.99",
+      description: "15\" W x 15\" D x 18\" H with composite wood and laminate finish. Compact design with easy assembly, adds functional surface space without crowding your RV interior."
     }
   ];
 
   return (
     <CategoryLayout
       title="Furniture & Interior"
-      description="Essential RV bathroom and interior accessories for comfort and functionality. Expert reviews, top-rated products, and best Amazon deals for maintaining your RV's interior systems."
+      description="Essential RV furniture, bathroom, and interior accessories for comfort and functionality. Expert reviews, top-rated products, and best Amazon deals for furnishing your RV's interior space."
       products={products}
     >
       <div className="text-center">
