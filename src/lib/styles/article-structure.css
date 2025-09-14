@@ -448,7 +448,9 @@ html, body {
 
 /* Special styling for Amazon links in article content */
 .article-content a[href*="amazon.com"],
-a[href*="amazon.com"] {
+a[href*="amazon.com"],
+.article-content a[href*="amzn.to"],
+a[href*="amzn.to"] {
   display: inline-block !important;
   background: linear-gradient(135deg, #f97316, #ea580c) !important;
   color: white !important;
@@ -464,7 +466,9 @@ a[href*="amazon.com"] {
 }
 
 .article-content a[href*="amazon.com"]:hover,
-a[href*="amazon.com"]:hover {
+a[href*="amazon.com"]:hover,
+.article-content a[href*="amzn.to"]:hover,
+a[href*="amzn.to"]:hover {
   background: linear-gradient(135deg, #ea580c, #dc2626) !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4) !important;
@@ -472,14 +476,18 @@ a[href*="amazon.com"]:hover {
 }
 
 .article-content a[href*="amazon.com"]::before,
-a[href*="amazon.com"]::before {
+a[href*="amazon.com"]::before,
+.article-content a[href*="amzn.to"]::before,
+a[href*="amzn.to"]::before {
   content: "🛒 " !important;
   margin-right: 0.5rem !important;
 }
 
 /* Additional Amazon button variants */
 .article-content a[href*="amazon"],
-a[href*="amazon"] {
+a[href*="amazon"],
+.article-content a[href*="amzn.to"],
+a[href*="amzn.to"] {
   display: inline-block !important;
   background: linear-gradient(135deg, #f97316, #ea580c) !important;
   color: white !important;
@@ -495,7 +503,9 @@ a[href*="amazon"] {
 }
 
 .article-content a[href*="amazon"]:hover,
-a[href*="amazon"]:hover {
+a[href*="amazon"]:hover,
+.article-content a[href*="amzn.to"]:hover,
+a[href*="amzn.to"]:hover {
   background: linear-gradient(135deg, #ea580c, #dc2626) !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4) !important;
@@ -503,7 +513,9 @@ a[href*="amazon"]:hover {
 }
 
 .article-content a[href*="amazon"]::before,
-a[href*="amazon"]::before {
+a[href*="amazon"]::before,
+.article-content a[href*="amzn.to"]::before,
+a[href*="amzn.to"]::before {
   content: "🛒 " !important;
   margin-right: 0.5rem !important;
 }
