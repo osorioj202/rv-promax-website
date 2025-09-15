@@ -123,18 +123,20 @@ export default function Home() {
             </Link>
           </div>
           
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-teal-300 mb-2">100+</div>
+          {/* Trust Indicators - Horizontal Layout */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 max-w-4xl mx-auto">
+            <div className="flex items-center gap-2">
+              <div className="text-2xl sm:text-3xl font-bold text-teal-300">100+</div>
               <div className="text-sm opacity-80">Expert Guides</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-teal-300 mb-2">60K+</div>
+            <div className="hidden sm:block w-px h-8 bg-white/30"></div>
+            <div className="flex items-center gap-2">
+              <div className="text-2xl sm:text-3xl font-bold text-teal-300">60K+</div>
               <div className="text-sm opacity-80">Happy Customers</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-teal-300 mb-2">4.9/5</div>
+            <div className="hidden sm:block w-px h-8 bg-white/30"></div>
+            <div className="flex items-center gap-2">
+              <div className="text-2xl sm:text-3xl font-bold text-teal-300">4.9/5</div>
               <div className="text-sm opacity-80">Average Rating</div>
             </div>
           </div>
