@@ -10,8 +10,8 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/private/'],
       },
     ],
-    sitemap: 'https://rv-promax.com/sitemap.xml',
-    host: 'https://rv-promax.com',
+    sitemap: 'https://www.rv-promax.com/sitemap.xml',
+    host: 'https://www.rv-promax.com',
   };
 }
 
