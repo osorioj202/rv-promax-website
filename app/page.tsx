@@ -47,7 +47,18 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Enhanced Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-teal-600 text-white py-24 px-6 overflow-hidden">
+      <section className="relative text-white py-24 px-6 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/1757967255.png)',
+          }}
+        ></div>
+        
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-blue-700/80 to-teal-600/80"></div>
+        
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-20 h-20 border-2 border-white rounded-full"></div>
