@@ -1,5 +1,6 @@
 // app/electrical-electronics/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
+import ProductImage from '@/components/ProductImage';
 
 export default function ElectricalElectronicsPage() {
   const products = [
@@ -8,63 +9,72 @@ export default function ElectricalElectronicsPage() {
       url: "https://amzn.to/3IkFkSt",
       badge: "Best Seller",
       price: "$99.99",
-      description: "High-efficiency solar panel perfect for RV roof mounting and off-grid power"
+      description: "High-efficiency solar panel perfect for RV roof mounting and off-grid power",
+      image: "/images/products/electrical-electronics/renogy-100w-12v-monocrystalline-solar-panel.png"
     },
     {
       name: "Victron Energy SmartSolar MPPT 100/20 Charge Controller",
       url: "https://amzn.to/3VL2SD4",
       badge: "Premium",
       price: "$149.95",
-      description: "Advanced MPPT charge controller with Bluetooth monitoring and app control"
+      description: "Advanced MPPT charge controller with Bluetooth monitoring and app control",
+      image: "/images/products/electrical-electronics/victron-energy-smartsolar-mppt-100-20-charge-controller.png"
     },
     {
       name: "Battle Born LiFePO4 Deep Cycle Battery 100Ah",
       url: "https://amzn.to/4gjEHoN",
       badge: "Top Rated",
       price: "$899.99",
-      description: "Lithium iron phosphate battery with 10+ year lifespan and 3000+ cycles"
+      description: "Lithium iron phosphate battery with 10+ year lifespan and 3000+ cycles",
+      image: "/images/products/electrical-electronics/battle-born-lifepo4-deep-cycle-battery-100ah.png"
     },
     {
       name: "Go Power! GP-SW3000-12 3000W Pure Sine Wave Inverter",
       url: "https://amzn.to/4mdCtIS",
       badge: "Professional",
       price: "$399.99",
-      description: "High-capacity pure sine wave inverter for sensitive electronics and appliances"
+      description: "High-capacity pure sine wave inverter for sensitive electronics and appliances",
+      image: "/images/products/electrical-electronics/go-power-gp-sw3000-12-3000w-pure-sine-wave-inverter.png"
     },
     {
       name: "Blue Sea Systems 12V Circuit Breaker Panel",
       url: "https://amzn.to/4mk7kDV",
       badge: "Best Seller",
       price: "$89.99",
-      description: "Professional-grade circuit breaker panel for safe electrical distribution"
+      description: "Professional-grade circuit breaker panel for safe electrical distribution",
+      image: "/images/products/electrical-electronics/blue-sea-systems-12v-circuit-breaker-panel.png"
     },
     {
       name: "Renogy 40A MPPT Solar Charge Controller",
       url: "https://amzn.to/48fo7V7",
       badge: "Top Pick",
       price: "$79.99",
-      description: "Efficient MPPT charge controller for solar panel systems up to 500W"
+      description: "Efficient MPPT charge controller for solar panel systems up to 500W",
+      image: "/images/products/electrical-electronics/renogy-40a-mppt-solar-charge-controller.png"
     },
     {
       name: "Victron Energy Orion-TR Smart 12/24-15A DC-DC Charger",
       url: "https://amzn.to/42jYWwU",
       badge: "Premium",
       price: "$129.99",
-      description: "Smart DC-DC charger with Bluetooth monitoring for dual battery systems"
+      description: "Smart DC-DC charger with Bluetooth monitoring for dual battery systems",
+      image: "/images/products/electrical-electronics/victron-energy-orion-tr-smart-12-24-15a-dc-dc-charger.png"
     },
     {
       name: "Blue Sea Systems 12V USB Charger Socket",
       url: "https://amzn.to/4mU3JNQ",
       badge: "Best Value",
       price: "$24.99",
-      description: "Dual USB charging socket with LED indicator for mobile devices"
+      description: "Dual USB charging socket with LED indicator for mobile devices",
+      image: "/images/products/electrical-electronics/blue-sea-systems-12v-usb-charger-socket.png"
     },
     {
       name: "Renogy 200W 12V Monocrystalline Solar Panel Kit",
       url: "https://amzn.to/4meRVEO",
       badge: "Editor's Choice",
       price: "$299.99",
-      description: "Complete solar panel kit with charge controller and mounting hardware"
+      description: "Complete solar panel kit with charge controller and mounting hardware",
+      image: "/images/products/electrical-electronics/renogy-200w-12v-monocrystalline-solar-panel-kit.png"
     }
   ];
 
