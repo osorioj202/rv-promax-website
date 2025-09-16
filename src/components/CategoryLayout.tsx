@@ -1,5 +1,6 @@
 // src/components/CategoryLayout.tsx
 import Link from 'next/link';
+import ProductImage from './ProductImage';
 
 export default function CategoryLayout({ 
   title, 
@@ -15,6 +16,7 @@ export default function CategoryLayout({
     badge: string;
     price?: string;
     description?: string;
+    image?: string;
   }>;
   children?: React.ReactNode;
 }) {
@@ -34,6 +36,19 @@ export default function CategoryLayout({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, i) => (
             <div key={i} className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+              {/* Product Image */}
+              {product.image && (
+                <div className="relative">
+                  <ProductImage
+                    productName={product.name}
+                    category="camping-gear"
+                    className="w-full h-48 object-cover"
+                    priority={i < 3} // First 3 images load with priority
+                    imagePath={product.image}
+                  />
+                </div>
+              )}
+              
               <div className="p-4">
                 <span className="inline-block bg-orange-500 text-white text-xs px-2 py-1 rounded mb-2">
                   {product.badge}

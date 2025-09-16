@@ -1,5 +1,6 @@
 // app/camping-gear/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
+import ProductImage from '@/components/ProductImage';
 
 export default function CampingGearPage() {
   const products = [
@@ -8,63 +9,72 @@ export default function CampingGearPage() {
       url: "https://amzn.to/3K46DB0",
       badge: "Best Seller",
       price: "$89.99",
-      description: "Weather-resistant tent with easy setup, perfect for family camping"
+      description: "Weather-resistant tent with easy setup, perfect for family camping",
+      image: "/images/products/camping-gear/coleman-sundome-4-person-tent.png"
     },
     {
       name: "Coleman 30°F Mummy Sleeping Bag",
       url: "https://amzn.to/3IfdlUn",
       badge: "Top Rated",
       price: "$29.99",
-      description: "Lightweight, compressible sleeping bag rated for 30°F temperatures"
+      description: "Lightweight, compressible sleeping bag rated for 30°F temperatures",
+      image: "/images/products/camping-gear/coleman-30f-mummy-sleeping-bag.png"
     },
     {
       name: "Jetboil Flash Cooking System",
       url: "https://amzn.to/3VJBXaS",
       badge: "Best Seller",
       price: "$119.95",
-      description: "Ultra-fast cooking system with integrated pot and burner for efficient camp cooking"
+      description: "Ultra-fast cooking system with integrated pot and burner for efficient camp cooking",
+      image: "/images/products/camping-gear/jetboil-flash-cooking-system.png"
     },
     {
       name: "Black Diamond Spot Headlamp",
       url: "https://amzn.to/47G9pGD",
       badge: "Top Rated",
       price: "$39.95",
-      description: "Bright, lightweight headlamp with multiple lighting modes for hands-free illumination"
+      description: "Bright, lightweight headlamp with multiple lighting modes for hands-free illumination",
+      image: "/images/products/camping-gear/black-diamond-spot-headlamp.png"
     },
     {
       name: "Therm-a-Rest Z-Lite Sleeping Pad",
       url: "https://amzn.to/46hudBH",
       badge: "Best Value",
       price: "$44.95",
-      description: "Lightweight, closed-cell foam sleeping pad that provides excellent insulation and comfort"
+      description: "Lightweight, closed-cell foam sleeping pad that provides excellent insulation and comfort",
+      image: "/images/products/camping-gear/therm-a-rest-z-lite-sleeping-pad.png"
     },
     {
       name: "MSR PocketRocket 2 Stove",
       url: "https://amzn.to/3JTrNSy",
       badge: "Top Pick",
       price: "$39.95",
-      description: "Ultra-lightweight, compact backpacking stove perfect for solo and duo adventures"
+      description: "Ultra-lightweight, compact backpacking stove perfect for solo and duo adventures",
+      image: "/images/products/camping-gear/msr-pocketrocket-2-stove.png"
     },
     {
       name: "Osprey Atmos AG 65 Backpack",
       url: "https://amzn.to/3K0F1N9",
       badge: "Top Rated",
       price: "$249.95",
-      description: "Premium backpacking pack with Anti-Gravity suspension for maximum comfort on long hikes"
+      description: "Premium backpacking pack with Anti-Gravity suspension for maximum comfort on long hikes",
+      image: "/images/products/camping-gear/osprey-atmos-ag-65-backpack.png"
     },
     {
       name: "Stanley Adventure Camp Cook Set",
       url: "https://amzn.to/41RB5ED",
       badge: "Best Seller",
       price: "$24.99",
-      description: "Complete cook set with pots, pans, and utensils for efficient camp cooking"
+      description: "Complete cook set with pots, pans, and utensils for efficient camp cooking",
+      image: "/images/products/camping-gear/stanley-adventure-camp-cook-set.png"
     },
     {
       name: "Nemo Dagger 2P Tent",
       url: "https://amzn.to/4n2tThC",
       badge: "Premium",
       price: "$399.95",
-      description: "Ultra-lightweight, freestanding tent with excellent weather protection and spacious interior"
+      description: "Ultra-lightweight, freestanding tent with excellent weather protection and spacious interior",
+      image: "/images/products/camping-gear/nemo-dagger-2p-tent.png"
     }
   ];
 
