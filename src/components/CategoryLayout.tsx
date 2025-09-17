@@ -20,6 +20,14 @@ export default function CategoryLayout({
   }>;
   children?: React.ReactNode;
 }) {
+  // Extraer la categoría del título para usar en ProductImage
+  const getCategoryFromTitle = (title: string) => {
+    return title.toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  };
+  
+  const category = getCategoryFromTitle(title);
   return (
     <main className="max-w-5xl mx-auto py-12 px-6">
       <h1 className="category-page-title">{title}</h1>
@@ -41,7 +49,7 @@ export default function CategoryLayout({
                 <div className="relative">
                   <ProductImage
                     productName={product.name}
-                    category="camping-gear"
+                    category={category}
                     className="w-full h-48 object-cover"
                     priority={i < 3} // First 3 images load with priority
                     imagePath={product.image}
