@@ -81,7 +81,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     "dateModified": article.lastUpdated,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://rv-promax.com/articles/${slug}`
+      "@id": `https://www.rv-promax.com/articles/${slug}`
     },
     "keywords": article.targetKeyword,
     "wordCount": article.wordCount,

@@ -21,14 +21,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://rv-promax.com'),
+  metadataBase: new URL('https://www.rv-promax.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://rv-promax.com',
+    url: 'https://www.rv-promax.com',
     title: 'RV-Pro Max - Expert RV & Camping Gear Reviews | Best Amazon Deals 2025',
     description: 'Discover the best RV accessories, camping gear, and outdoor equipment with expert reviews. Trusted by 60K+ RV owners. Complete buying guides, installation tips & exclusive Amazon deals.',
     siteName: 'RV-Pro Max',
@@ -84,16 +84,16 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "RV & Camping Gear Pro",
               "description": "Expert RV accessories and camping gear reviews. Trusted by 60K+ RV owners.",
-              "url": "https://rv-promax.com",
+              "url": "https://www.rv-promax.com",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://rv-promax.com/search?q={search_term_string}",
+                "target": "https://www.rv-promax.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               },
               "publisher": {
                 "@type": "Organization",
                 "name": "RV & Camping Gear Pro",
-                "url": "https://rv-promax.com"
+                "url": "https://www.rv-promax.com"
               }
             })
           }}
