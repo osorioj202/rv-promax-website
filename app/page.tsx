@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import articles from '@/lib/articles-comprehensive.json';
 import HeroCarousel from '@/components/HeroCarousel';
+import HeroFeaturedProducts from '@/components/HeroFeaturedProducts';
+import HeroSearch from '@/components/HeroSearch';
 
 export default function Home() {
   const [featuredArticles, setFeaturedArticles] = useState([]);
@@ -48,7 +50,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Enhanced Hero Section with Carousel */}
-      <section className="relative text-white h-screen overflow-hidden">
+      <section className="relative text-white min-h-screen overflow-hidden">
         {/* Hero Carousel Background */}
         <HeroCarousel />
         
@@ -60,7 +62,7 @@ export default function Home() {
           <div className="absolute bottom-32 right-1/3 w-8 h-8 border-2 border-white rounded-full"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto text-center z-20">
+        <div className="relative max-w-7xl mx-auto text-center z-30 py-24 px-6 flex flex-col justify-center min-h-screen">
           {/* Logo Section */}
           <div className="mb-8 flex justify-center">
             <div className="flex items-center gap-4 group">
@@ -101,6 +103,9 @@ export default function Home() {
               🏆 Trusted by 60,000+ RV Owners Worldwide
             </span>
           </div>
+
+          {/* Hero Search */}
+          <HeroSearch />
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             RV & Camping Gear
@@ -128,7 +133,7 @@ export default function Home() {
           </div>
           
           {/* Trust Indicators - Horizontal Layout */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 max-w-4xl mx-auto mb-12">
             <div className="flex items-center gap-2">
               <div className="text-2xl sm:text-3xl font-bold text-teal-300">100+</div>
               <div className="text-sm opacity-80">Expert Guides</div>
@@ -144,6 +149,14 @@ export default function Home() {
               <div className="text-sm opacity-80">Average Rating</div>
             </div>
           </div>
+
+        </div>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-teal-500 text-white">
+        <div className="max-w-7xl mx-auto">
+          <HeroFeaturedProducts />
         </div>
       </section>
 
