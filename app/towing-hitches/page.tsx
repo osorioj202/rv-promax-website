@@ -1,5 +1,6 @@
 // app/towing-hitches/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
+import ProductImage from '@/components/ProductImage';
 
 export default function TowingHitchesPage() {
   const products = [
@@ -8,63 +9,72 @@ export default function TowingHitchesPage() {
       url: "https://amzn.to/4nteZkc",
       badge: "Best Seller",
       price: "$189.99",
-      description: "Heavy-duty Class V hitch with 17,000 lb towing capacity and 1,700 lb tongue weight"
+      description: "Heavy-duty Class V hitch with 17,000 lb towing capacity and 1,700 lb tongue weight",
+      image: "/images/products/towing-hitches/curt-17000-class-v-trailer-hitch.png"
     },
     {
       name: "Reese Towpower 80073 Weight Distribution Hitch",
       url: "https://amzn.to/3VReDYE",
       badge: "Top Rated",
       price: "$299.99",
-      description: "Professional weight distribution hitch with 10,000 lb capacity and sway control"
+      description: "Professional weight distribution hitch with 10,000 lb capacity and sway control",
+      image: "/images/products/towing-hitches/reese-towpower-80073-weight-distribution-hitch.png"
     },
     {
       name: "Curt 4500 Class III Trailer Hitch",
       url: "https://amzn.to/41PPqBs",
       badge: "Best Value",
       price: "$89.99",
-      description: "Durable Class III hitch with 4,500 lb towing capacity and 450 lb tongue weight"
+      description: "Durable Class III hitch with 4,500 lb towing capacity and 450 lb tongue weight",
+      image: "/images/products/towing-hitches/curt-4500-class-iii-trailer-hitch.png"
     },
     {
       name: "Reese Towpower 80073 Sway Control Kit",
       url: "https://amzn.to/463x3LZ",
       badge: "Editor's Choice",
       price: "$149.99",
-      description: "Dual cam sway control system for improved towing stability and safety"
+      description: "Dual cam sway control system for improved towing stability and safety",
+      image: "/images/products/towing-hitches/reese-towpower-80073-sway-control-kit.png"
     },
     {
       name: "Curt 16000 Class V Trailer Hitch",
       url: "https://amzn.to/3K2DwOA",
       badge: "Professional",
       price: "$229.99",
-      description: "Heavy-duty Class V hitch with 16,000 lb towing capacity and 1,600 lb tongue weight"
+      description: "Heavy-duty Class V hitch with 16,000 lb towing capacity and 1,600 lb tongue weight",
+      image: "/images/products/towing-hitches/curt-16000-class-v-trailer-hitch.png"
     },
     {
       name: "Reese Towpower 80073 Weight Distribution Kit",
       url: "https://amzn.to/3HWw337",
       badge: "Top Pick",
       price: "$199.99",
-      description: "Complete weight distribution kit with 8,000 lb capacity and sway control"
+      description: "Complete weight distribution kit with 8,000 lb capacity and sway control",
+      image: "/images/products/towing-hitches/reese-towpower-80073-weight-distribution-kit.png"
     },
     {
       name: "Curt 3500 Class III Trailer Hitch",
       url: "https://amzn.to/4phHUJT",
       badge: "Best Value",
       price: "$69.99",
-      description: "Reliable Class III hitch with 3,500 lb towing capacity and 350 lb tongue weight"
+      description: "Reliable Class III hitch with 3,500 lb towing capacity and 350 lb tongue weight",
+      image: "/images/products/towing-hitches/curt-3500-class-iii-trailer-hitch.png"
     },
     {
       name: "Reese Towpower 80073 Sway Control Bar",
       url: "https://amzn.to/4gmbSrX",
       badge: "Professional",
       price: "$79.99",
-      description: "Heavy-duty sway control bar for improved towing stability and control"
+      description: "Heavy-duty sway control bar for improved towing stability and control",
+      image: "/images/products/towing-hitches/reese-towpower-80073-sway-control-bar.png"
     },
     {
       name: "Curt 5000 Class IV Trailer Hitch",
       url: "https://amzn.to/47GXxEg",
       badge: "Top Pick",
       price: "$129.99",
-      description: "Heavy-duty Class IV hitch with 5,000 lb towing capacity and 500 lb tongue weight"
+      description: "Heavy-duty Class IV hitch with 5,000 lb towing capacity and 500 lb tongue weight",
+      image: "/images/products/towing-hitches/curt-5000-class-iv-trailer-hitch.png"
     }
   ];
 
