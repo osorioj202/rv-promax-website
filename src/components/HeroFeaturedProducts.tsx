@@ -25,7 +25,7 @@ const featuredProducts: FeaturedProduct[] = [
     badge: 'Best Seller',
     badgeColor: 'bg-orange-500',
     image: '/images/hero-products/featured-1.png',
-    amazonUrl: 'https://amzn.to/3KlJAle',
+    amazonUrl: 'https://amzn.to/42xPV3n',
     category: 'Mattresses & Bedding',
     discount: '25% OFF'
   },
@@ -37,7 +37,7 @@ const featuredProducts: FeaturedProduct[] = [
     badge: 'Top Rated',
     badgeColor: 'bg-blue-500',
     image: '/images/hero-products/featured-2.png',
-    amazonUrl: 'https://amzn.to/3IkFkSt',
+    amazonUrl: 'https://amzn.to/4pvjr3y',
     category: 'Electrical & Electronics',
     discount: '23% OFF'
   },
@@ -49,7 +49,7 @@ const featuredProducts: FeaturedProduct[] = [
     badge: 'Editor\'s Choice',
     badgeColor: 'bg-green-500',
     image: '/images/hero-products/featured-3.png',
-    amazonUrl: 'https://amzn.to/46A2L3x',
+    amazonUrl: 'https://amzn.to/4nGAs9n',
     category: 'Outdoor Recreation',
     discount: '17% OFF'
   },
@@ -61,7 +61,7 @@ const featuredProducts: FeaturedProduct[] = [
     badge: 'Professional',
     badgeColor: 'bg-purple-500',
     image: '/images/hero-products/featured-4.png',
-    amazonUrl: 'https://amzn.to/4nteZkc',
+    amazonUrl: 'https://amzn.to/3I3cq9C',
     category: 'Towing & Hitches',
     discount: '17% OFF'
   },
@@ -73,7 +73,7 @@ const featuredProducts: FeaturedProduct[] = [
     badge: 'Premium',
     badgeColor: 'bg-teal-500',
     image: '/images/hero-products/featured-5.png',
-    amazonUrl: 'https://amzn.to/3VfKamX',
+    amazonUrl: 'https://amzn.to/3VU44Ej',
     category: 'General RV',
     discount: '14% OFF'
   }
