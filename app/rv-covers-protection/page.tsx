@@ -1,5 +1,6 @@
 // app/rv-covers-protection/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
+import ProductImage from '@/components/ProductImage';
 
 export default function RVCoversProtectionPage() {
   const products = [
@@ -8,63 +9,72 @@ export default function RVCoversProtectionPage() {
       url: "https://amzn.to/3VfKamX",
       badge: "Best Seller",
       price: "$189.99",
-      description: "Heavy-duty 3-layer polypropylene cover with UV protection and breathable fabric"
+      description: "Heavy-duty 3-layer polypropylene cover with UV protection and breathable fabric",
+      image: "/images/products/rv-covers-protection/classic-accessories-overdrive-polypro-3-rv-cover.png"
     },
     {
       name: "ADCO Designer Series SFS Aqua Shed RV Cover",
       url: "https://amzn.to/4n4FIno",
       badge: "Top Rated",
       price: "$299.99",
-      description: "Premium 5-layer fabric with Aqua Shed technology for superior water resistance"
+      description: "Premium 5-layer fabric with Aqua Shed technology for superior water resistance",
+      image: "/images/products/rv-covers-protection/adco-designer-series-sfs-aqua-shed-rv-cover.png"
     },
     {
       name: "Camco RV Cover for Class A Motorhomes",
       url: "https://amzn.to/4pmZtrP",
       badge: "Best Value",
       price: "$149.99",
-      description: "Durable polyester cover with reinforced corners and adjustable straps"
+      description: "Durable polyester cover with reinforced corners and adjustable straps",
+      image: "/images/products/rv-covers-protection/camco-rv-cover-for-class-a-motorhomes.png"
     },
     {
       name: "Classic Accessories OverDrive PolyPro 4 RV Cover",
       url: "https://amzn.to/3JZcrMk",
       badge: "Editor's Choice",
       price: "$229.99",
-      description: "4-layer polypropylene cover with enhanced UV protection and tear resistance"
+      description: "4-layer polypropylene cover with enhanced UV protection and tear resistance",
+      image: "/images/products/rv-covers-protection/classic-accessories-overdrive-polypro-4-rv-cover.png"
     },
     {
       name: "ADCO RV Cover for Class C Motorhomes",
       url: "https://amzn.to/46kqZxk",
       badge: "Professional",
       price: "$249.99",
-      description: "Professional-grade cover with SFS Aqua Shed technology and reinforced seams"
+      description: "Professional-grade cover with SFS Aqua Shed technology and reinforced seams",
+      image: "/images/products/rv-covers-protection/adco-rv-cover-for-class-c-motorhomes.png"
     },
     {
       name: "Camco RV Cover for Travel Trailers",
       url: "https://amzn.to/41PcArH",
       badge: "Top Pick",
       price: "$119.99",
-      description: "Heavy-duty polyester cover with zippered panels for easy access to doors and compartments"
+      description: "Heavy-duty polyester cover with zippered panels for easy access to doors and compartments",
+      image: "/images/products/rv-covers-protection/camco-rv-cover-for-travel-trailers.png"
     },
     {
       name: "Classic Accessories OverDrive PolyPro 5 RV Cover",
       url: "https://amzn.to/4mW1ObD",
       badge: "Best Value",
       price: "$279.99",
-      description: "5-layer polypropylene cover with maximum UV protection and weather resistance"
+      description: "5-layer polypropylene cover with maximum UV protection and weather resistance",
+      image: "/images/products/rv-covers-protection/classic-accessories-overdrive-polypro-5-rv-cover.png"
     },
     {
       name: "ADCO RV Cover for Fifth Wheels",
       url: "https://amzn.to/46AOoMj",
       badge: "Professional",
       price: "$329.99",
-      description: "Heavy-duty cover designed specifically for fifth wheel trailers with reinforced corners"
+      description: "Heavy-duty cover designed specifically for fifth wheel trailers with reinforced corners",
+      image: "/images/products/rv-covers-protection/adco-rv-cover-for-fifth-wheels.png"
     },
     {
       name: "Camco RV Cover for Class B Motorhomes",
       url: "https://amzn.to/4nsao1z",
       badge: "Top Pick",
       price: "$89.99",
-      description: "Compact cover for Class B motorhomes with breathable fabric and easy installation"
+      description: "Compact cover for Class B motorhomes with breathable fabric and easy installation",
+      image: "/images/products/rv-covers-protection/camco-rv-cover-for-class-b-motorhomes.png"
     }
   ];
 
