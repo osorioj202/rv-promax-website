@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import articles from '@/lib/articles-comprehensive.json';
+import HeroCarousel from '@/components/HeroCarousel';
 
 export default function Home() {
   const [featuredArticles, setFeaturedArticles] = useState([]);
@@ -46,28 +47,20 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* Enhanced Hero Section */}
-      <section className="relative text-white py-24 px-6 overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/1757967255.png)',
-          }}
-        ></div>
-        
-        {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-blue-700/80 to-teal-600/80"></div>
+      {/* Enhanced Hero Section with Carousel */}
+      <section className="relative text-white h-screen overflow-hidden">
+        {/* Hero Carousel Background */}
+        <HeroCarousel />
         
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-10 z-10">
           <div className="absolute top-10 left-10 w-20 h-20 border-2 border-white rounded-full"></div>
           <div className="absolute top-32 right-20 w-16 h-16 border-2 border-white rounded-full"></div>
           <div className="absolute bottom-20 left-1/4 w-12 h-12 border-2 border-white rounded-full"></div>
           <div className="absolute bottom-32 right-1/3 w-8 h-8 border-2 border-white rounded-full"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="relative max-w-7xl mx-auto text-center z-20">
           {/* Logo Section */}
           <div className="mb-8 flex justify-center">
             <div className="flex items-center gap-4 group">
