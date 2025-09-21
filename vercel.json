@@ -89,7 +89,7 @@
     }
   },
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://rv-promax.com",
+    "NEXT_PUBLIC_SITE_URL": "https://www.rv-promax.com",
     "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID": "GA_MEASUREMENT_ID",
     "NEXT_PUBLIC_GOOGLE_ADSENSE_ID": "ca-pub-YOUR_PUBLISHER_ID"
   }
