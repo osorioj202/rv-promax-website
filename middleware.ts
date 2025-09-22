@@ -6,19 +6,12 @@ export function middleware(request: NextRequest) {
   
   // Check if the request is for rv-promax.com (without www)
   if (hostname === 'rv-promax.com') {
-    // Create redirect URL with www
-    const redirectUrl = new URL(request.url)
-    redirectUrl.hostname = 'www.rv-promax.com'
+    // Build the redirect URL with the same path and search params
+    const url = request.nextUrl.clone()
+    url.hostname = 'www.rv-promax.com'
     
-    // Create response with 301 redirect and cache headers
-    const response = NextResponse.redirect(redirectUrl, 301)
-    
-    // Add headers to prevent caching of redirect
-    response.headers.set('Cache-Control', 'no-cache, no-store, must-revalidate')
-    response.headers.set('Pragma', 'no-cache')
-    response.headers.set('Expires', '0')
-    
-    return response
+    // Return 301 redirect
+    return NextResponse.redirect(url, 301)
   }
   
   return NextResponse.next()
