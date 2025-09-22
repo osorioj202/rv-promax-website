@@ -64,7 +64,7 @@
         }
       ],
       "destination": "https://www.rv-promax.com/$1",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/blog/:slug",
