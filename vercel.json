@@ -56,6 +56,17 @@
   ],
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "rv-promax.com"
+        }
+      ],
+      "destination": "https://www.rv-promax.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/blog/:slug",
       "destination": "/articles/:slug",
       "permanent": true

@@ -23,7 +23,7 @@ export const metadata = {
   },
   metadataBase: new URL('https://www.rv-promax.com'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.rv-promax.com/',
   },
   openGraph: {
     type: 'website',

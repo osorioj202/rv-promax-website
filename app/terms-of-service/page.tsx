@@ -80,7 +80,7 @@ export default function TermsOfService() {
             </p>
             <p className="text-gray-700">
               Email: info@shonexxa.com<br />
-              Website: https://rv-promax.com
+              Website: https://www.rv-promax.com
             </p>
           </div>
         </div>
