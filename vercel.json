@@ -63,7 +63,7 @@
           "value": "rv-promax.com"
         }
       ],
-      "destination": "https://www.rv-promax.com/:path*",
+      "destination": "https://www.rv-promax.com/$1",
       "permanent": true
     },
     {
