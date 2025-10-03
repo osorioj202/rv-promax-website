@@ -1,6 +1,7 @@
 // app/rv-covers-protection/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
 import ProductImage from '@/components/ProductImage';
+import CanonicalURL from '@/components/CanonicalURL';
 
 export default function RVCoversProtectionPage() {
   const products = [
@@ -79,7 +80,9 @@ export default function RVCoversProtectionPage() {
   ];
 
   return (
-    <CategoryLayout
+    <>
+      <CanonicalURL url="https://www.rv-promax.com/rv-covers-protection" />
+      <CategoryLayout
       title="RV Covers & Protection"
       description="Protect your RV from the elements with quality covers and protection gear. Expert reviews, top-rated products, and best Amazon deals for long-lasting RV protection."
       products={products}
@@ -147,5 +150,6 @@ export default function RVCoversProtectionPage() {
         </a>
       </div>
     </CategoryLayout>
+    </>
   );
 }

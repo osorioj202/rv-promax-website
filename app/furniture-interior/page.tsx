@@ -1,6 +1,7 @@
 // app/furniture-interior/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
 import ProductImage from '@/components/ProductImage';
+import CanonicalURL from '@/components/CanonicalURL';
 
 export default function FurnitureInteriorPage() {
   const products = [
@@ -127,7 +128,9 @@ export default function FurnitureInteriorPage() {
   ];
 
   return (
-    <CategoryLayout
+    <>
+      <CanonicalURL url="https://www.rv-promax.com/furniture-interior" />
+      <CategoryLayout
       title="Furniture & Interior"
       description="Essential RV furniture, bathroom, and interior accessories for comfort and functionality. Expert reviews, top-rated products, and best Amazon deals for furnishing your RV's interior space."
       products={products}
@@ -195,5 +198,6 @@ export default function FurnitureInteriorPage() {
         </a>
       </div>
     </CategoryLayout>
+    </>
   );
 } 

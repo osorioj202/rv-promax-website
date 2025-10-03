@@ -1,6 +1,7 @@
 // app/electrical-electronics/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
 import ProductImage from '@/components/ProductImage';
+import CanonicalURL from '@/components/CanonicalURL';
 
 export default function ElectricalElectronicsPage() {
   const products = [
@@ -79,7 +80,9 @@ export default function ElectricalElectronicsPage() {
   ];
 
   return (
-    <CategoryLayout
+    <>
+      <CanonicalURL url="https://www.rv-promax.com/electrical-electronics" />
+      <CategoryLayout
       title="Electrical & Electronics"
       description="Complete RV power systems, solar panels, batteries, and electronic accessories. Expert reviews, top-rated products, and best Amazon deals for reliable off-grid power."
       products={products}
@@ -147,5 +150,6 @@ export default function ElectricalElectronicsPage() {
         </a>
       </div>
     </CategoryLayout>
+    </>
   );
 }

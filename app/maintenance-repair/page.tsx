@@ -1,6 +1,7 @@
 // app/maintenance-repair/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
 import ProductImage from '@/components/ProductImage';
+import CanonicalURL from '@/components/CanonicalURL';
 
 export default function MaintenanceRepairPage() {
   const products = [
@@ -79,7 +80,9 @@ export default function MaintenanceRepairPage() {
   ];
 
   return (
-    <CategoryLayout
+    <>
+      <CanonicalURL url="https://www.rv-promax.com/maintenance-repair" />
+      <CategoryLayout
       title="Maintenance & Repair"
       description="Keep your RV in perfect condition with professional maintenance tools and repair supplies. Expert reviews, top-rated products, and best Amazon deals for reliable RV upkeep."
       products={products}
@@ -147,5 +150,6 @@ export default function MaintenanceRepairPage() {
         </a>
       </div>
     </CategoryLayout>
+    </>
   );
 }

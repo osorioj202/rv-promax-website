@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') || ''
+  const pathname = request.nextUrl.pathname
   
   // Check if the request is for rv-promax.com (without www)
   if (hostname === 'rv-promax.com') {
@@ -15,7 +16,20 @@ export function middleware(request: NextRequest) {
     const response = NextResponse.redirect(url, 301)
     
     // Add canonical header to reinforce the preferred domain
-    response.headers.set('Link', '<https://www.rv-promax.com/>; rel="canonical"')
+    response.headers.set('Link', `<https://www.rv-promax.com${pathname}>; rel="canonical"`)
+    
+    return response
+  }
+  
+  // For www.rv-promax.com requests, add canonical headers
+  if (hostname === 'www.rv-promax.com') {
+    const response = NextResponse.next()
+    
+    // Add canonical header to reinforce the preferred domain
+    response.headers.set('Link', `<https://www.rv-promax.com${pathname}>; rel="canonical"`)
+    
+    // Add additional SEO headers
+    response.headers.set('X-Robots-Tag', 'index, follow')
     
     return response
   }

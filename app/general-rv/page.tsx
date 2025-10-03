@@ -1,6 +1,7 @@
 // app/general-rv/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
 import ProductImage from '@/components/ProductImage';
+import CanonicalURL from '@/components/CanonicalURL';
 
 export default function GeneralRVPage() {
   const products = [
@@ -79,7 +80,9 @@ export default function GeneralRVPage() {
   ];
 
   return (
-    <CategoryLayout
+    <>
+      <CanonicalURL url="https://www.rv-promax.com/general-rv" />
+      <CategoryLayout
       title="General RV"
       description="Essential RV products and accessories for all types of recreational vehicles. Expert reviews, top-rated products, and best Amazon deals for complete RV solutions."
       products={products}
@@ -147,6 +150,7 @@ export default function GeneralRVPage() {
         </a>
       </div>
     </CategoryLayout>
+    </>
   );
 }
 

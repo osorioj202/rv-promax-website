@@ -1,6 +1,7 @@
 // app/mattresses-bedding/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
 import ProductImage from '@/components/ProductImage';
+import CanonicalURL from '@/components/CanonicalURL';
 
 export default function MattressesBeddingPage() {
   const products = [
@@ -79,7 +80,9 @@ export default function MattressesBeddingPage() {
   ];
 
   return (
-    <CategoryLayout
+    <>
+      <CanonicalURL url="https://www.rv-promax.com/mattresses-bedding" />
+      <CategoryLayout
       title="Mattresses & Bedding"
       description="Comfortable sleep solutions for your RV. Expert reviews, top-rated products, and best Amazon deals for restful nights on the road."
       products={products}
@@ -147,5 +150,6 @@ export default function MattressesBeddingPage() {
         </a>
       </div>
     </CategoryLayout>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 // app/outdoor-recreation/page.tsx
 import CategoryLayout from '@/components/CategoryLayout';
 import ProductImage from '@/components/ProductImage';
+import CanonicalURL from '@/components/CanonicalURL';
 
 export default function OutdoorRecreationPage() {
   const products = [
@@ -79,7 +80,9 @@ export default function OutdoorRecreationPage() {
   ];
 
   return (
-    <CategoryLayout
+    <>
+      <CanonicalURL url="https://www.rv-promax.com/outdoor-recreation" />
+      <CategoryLayout
       title="Outdoor Recreation"
       description="Enhance your outdoor adventures with quality recreation gear. Expert reviews, top-rated products, and best Amazon deals for unforgettable outdoor experiences."
       products={products}
@@ -147,5 +150,6 @@ export default function OutdoorRecreationPage() {
         </a>
       </div>
     </CategoryLayout>
+    </>
   );
 }

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useMemo } from 'react';
+import Head from 'next/head';
 import articles from '@/lib/articles-comprehensive.json';
 
 export default function ArticlesPage() {
@@ -93,7 +94,11 @@ export default function ArticlesPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <link rel="canonical" href="https://www.rv-promax.com/articles" />
+      </Head>
+      <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-teal-500 text-white py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -301,5 +306,6 @@ export default function ArticlesPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

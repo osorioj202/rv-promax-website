@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: ['/og-image.jpg'],
     },
     alternates: {
-      canonical: `/articles/${slug}`,
+      canonical: `https://www.rv-promax.com/articles/${slug}`,
     },
   };
 }
