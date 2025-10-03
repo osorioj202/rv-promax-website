@@ -9,9 +9,15 @@ export function middleware(request: NextRequest) {
     // Build the redirect URL with the same path and search params
     const url = request.nextUrl.clone()
     url.hostname = 'www.rv-promax.com'
+    url.protocol = 'https:'
     
-    // Return 301 redirect
-    return NextResponse.redirect(url, 301)
+    // Return 301 redirect with proper headers
+    const response = NextResponse.redirect(url, 301)
+    
+    // Add canonical header to reinforce the preferred domain
+    response.headers.set('Link', '<https://www.rv-promax.com/>; rel="canonical"')
+    
+    return response
   }
   
   return NextResponse.next()
