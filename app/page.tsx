@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import Head from 'next/head';
 import articles from '@/lib/articles-comprehensive.json';
 import HeroCarousel from '@/components/HeroCarousel';
 import HeroFeaturedProducts from '@/components/HeroFeaturedProducts';
@@ -49,11 +48,7 @@ export default function Home() {
   };
 
   return (
-    <>
-      <Head>
-        <link rel="canonical" href="https://www.rv-promax.com/" />
-      </Head>
-      <main className="min-h-screen">
+    <main className="min-h-screen">
       {/* Enhanced Hero Section with Carousel */}
       <section className="relative text-white min-h-screen overflow-hidden">
         {/* Hero Carousel Background */}
@@ -386,6 +381,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-    </>
   );
 }
