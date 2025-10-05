@@ -4,15 +4,6 @@ import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import articles from '@/lib/articles-comprehensive.json';
 
-// Metadata para la página de artículos
-export const metadata = {
-  title: 'Expert RV & Camping Gear Guides | RV-Pro Max',
-  description: 'Browse 100+ expert guides on RV accessories, camping gear, and outdoor equipment. Professional reviews, installation tips, and exclusive Amazon deals.',
-  alternates: {
-    canonical: 'https://www.rv-promax.com/articles',
-  },
-};
-
 export default function ArticlesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
