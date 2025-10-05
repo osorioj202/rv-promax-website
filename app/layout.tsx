@@ -34,10 +34,10 @@ export const metadata = {
     siteName: 'RV-Pro Max',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/hero/hero-1.png',
         width: 1200,
         height: 630,
-        alt: 'RV & Camping Gear Pro - Expert Reviews & Best Amazon Deals',
+        alt: 'RV-Pro Max - Expert RV & Camping Gear Reviews & Best Amazon Deals',
       },
     ],
   },
@@ -45,7 +45,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'RV-Pro Max - Expert RV & Camping Gear Reviews | Best Amazon Deals 2025',
     description: 'Discover the best RV accessories, camping gear, and outdoor equipment with expert reviews. Trusted by 60K+ RV owners.',
-    images: ['/og-image.jpg'],
+    images: ['/images/hero/hero-1.png'],
   },
   robots: {
     index: true,
