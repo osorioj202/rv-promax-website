@@ -82,8 +82,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "RV & Camping Gear Pro",
-              "description": "Expert RV accessories and camping gear reviews. Trusted by 60K+ RV owners.",
+              "name": "RV-Pro Max",
+              "alternateName": "RV Pro Max - Expert RV & Camping Gear Reviews",
+              "description": "Expert RV accessories and camping gear reviews. Trusted by 60K+ RV owners. Complete buying guides, installation tips & exclusive Amazon deals.",
               "url": "https://www.rv-promax.com",
               "potentialAction": {
                 "@type": "SearchAction",
@@ -92,8 +93,22 @@ export default function RootLayout({
               },
               "publisher": {
                 "@type": "Organization",
-                "name": "RV & Camping Gear Pro",
-                "url": "https://www.rv-promax.com"
+                "name": "RV-Pro Max",
+                "alternateName": "RV Pro Max",
+                "url": "https://www.rv-promax.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.rv-promax.com/images/hero/hero-1.png",
+                  "width": 1200,
+                  "height": 630
+                },
+                "sameAs": [
+                  "https://www.rv-promax.com"
+                ]
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.rv-promax.com"
               }
             })
           }}
