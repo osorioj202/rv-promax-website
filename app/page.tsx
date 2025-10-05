@@ -2,11 +2,18 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import Head from 'next/head';
 import articles from '@/lib/articles-comprehensive.json';
 import HeroCarousel from '@/components/HeroCarousel';
 import HeroFeaturedProducts from '@/components/HeroFeaturedProducts';
 import HeroSearch from '@/components/HeroSearch';
+
+export const metadata = {
+  title: 'RV-Pro Max - Expert RV & Camping Gear Reviews | Best Amazon Deals 2025',
+  description: 'Discover the best RV accessories, camping gear, and outdoor equipment with expert reviews. Trusted by 60K+ RV owners. Complete buying guides, installation tips & exclusive Amazon deals.',
+  alternates: {
+    canonical: 'https://www.rv-promax.com/',
+  },
+};
 
 export default function Home() {
   const [featuredArticles, setFeaturedArticles] = useState([]);
@@ -49,11 +56,7 @@ export default function Home() {
   };
 
   return (
-    <>
-      <Head>
-        <link rel="canonical" href="https://www.rv-promax.com/" />
-      </Head>
-      <main className="min-h-screen">
+    <main className="min-h-screen">
       {/* Enhanced Hero Section with Carousel */}
       <section className="relative text-white min-h-screen overflow-hidden">
         {/* Hero Carousel Background */}
@@ -386,6 +389,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-    </>
   );
 }

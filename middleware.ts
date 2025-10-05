@@ -12,23 +12,15 @@ export function middleware(request: NextRequest) {
     url.hostname = 'www.rv-promax.com'
     url.protocol = 'https:'
     
-    // Return 301 redirect with proper headers
-    const response = NextResponse.redirect(url, 301)
-    
-    // Add canonical header to reinforce the preferred domain
-    response.headers.set('Link', `<https://www.rv-promax.com${pathname}>; rel="canonical"`)
-    
-    return response
+    // Return 301 redirect
+    return NextResponse.redirect(url, 301)
   }
   
-  // For www.rv-promax.com requests, add canonical headers
+  // For www.rv-promax.com requests, add SEO headers only
   if (hostname === 'www.rv-promax.com') {
     const response = NextResponse.next()
     
-    // Add canonical header to reinforce the preferred domain
-    response.headers.set('Link', `<https://www.rv-promax.com${pathname}>; rel="canonical"`)
-    
-    // Add additional SEO headers
+    // Add SEO headers
     response.headers.set('X-Robots-Tag', 'index, follow')
     
     return response
