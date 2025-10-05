@@ -16,14 +16,9 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301)
   }
   
-  // For www.rv-promax.com requests, add SEO headers only
+  // For www.rv-promax.com requests, continue normally
   if (hostname === 'www.rv-promax.com') {
-    const response = NextResponse.next()
-    
-    // Add SEO headers
-    response.headers.set('X-Robots-Tag', 'index, follow')
-    
-    return response
+    return NextResponse.next()
   }
   
   return NextResponse.next()
