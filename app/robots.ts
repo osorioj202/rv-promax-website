@@ -3,15 +3,16 @@ import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/admin/', '/private/'],
-      },
-    ],
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: [
+        '/api/',
+        '/admin/',
+        '/private/',
+      ],
+    },
     sitemap: 'https://www.rv-promax.com/sitemap.xml',
-    host: 'https://www.rv-promax.com',
   };
 }
 
