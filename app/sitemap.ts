@@ -1,6 +1,7 @@
 // app/sitemap.ts
 import { MetadataRoute } from 'next';
 import articles from '@/lib/articles-comprehensive.json';
+import { discoveryArticles } from '@/lib/discovery-articles';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.rv-promax.com';
@@ -15,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/articles`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/discovery`,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.9,
@@ -89,5 +96,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...articlePages];
+  // Páginas de Discovery dinámicas
+  const discoveryPages = discoveryArticles.map((article) => ({
+    url: `${baseUrl}/discovery/${article.slug}`,
+    lastModified: new Date(article.publishDate),
+    changeFrequency: 'daily' as const,
+    priority: article.trendingScore > 80 ? 0.9 : 0.7,
+  }));
+
+  return [...staticPages, ...articlePages, ...discoveryPages];
 }
