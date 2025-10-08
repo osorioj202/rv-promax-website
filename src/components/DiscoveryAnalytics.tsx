@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 declare global {
@@ -13,7 +13,7 @@ declare global {
   }
 }
 
-export default function DiscoveryAnalytics() {
+function DiscoveryAnalyticsContent() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -36,6 +36,14 @@ export default function DiscoveryAnalytics() {
   }, [pathname, searchParams]);
 
   return null;
+}
+
+export default function DiscoveryAnalytics() {
+  return (
+    <Suspense fallback={null}>
+      <DiscoveryAnalyticsContent />
+    </Suspense>
+  );
 }
 
 // Helper function to track article interactions
