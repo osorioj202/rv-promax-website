@@ -89,6 +89,11 @@ export default function Header() {
           <ul className="flex flex-wrap justify-center gap-6 text-sm md:text-base">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/articles">Articles</Link></li>
+            <li>
+              <Link href="/discovery" className="font-semibold text-orange-600 hover:text-orange-700">
+                🔥 Discovery
+              </Link>
+            </li>
             <li><Link href="/general-rv">General RV</Link></li>
             <li><Link href="/rv-accessories">RV Accessories</Link></li>
             <li><Link href="/electrical-electronics">Electrical & Electronics</Link></li>
@@ -108,6 +113,7 @@ export default function Header() {
             <ul className="space-y-3">
               <li><Link href="/" className="block py-2 text-gray-700 hover:text-blue-600 transition">Home</Link></li>
               <li><Link href="/articles" className="block py-2 text-gray-700 hover:text-blue-600 transition">Articles</Link></li>
+              <li><Link href="/discovery" className="block py-2 font-semibold text-orange-600 hover:text-orange-700 transition">🔥 Discovery</Link></li>
               <li><Link href="/general-rv" className="block py-2 text-gray-700 hover:text-blue-600 transition">General RV</Link></li>
               <li><Link href="/rv-accessories" className="block py-2 text-gray-700 hover:text-blue-600 transition">RV Accessories</Link></li>
               <li><Link href="/electrical-electronics" className="block py-2 text-gray-700 hover:text-blue-600 transition">Electrical & Electronics</Link></li>
