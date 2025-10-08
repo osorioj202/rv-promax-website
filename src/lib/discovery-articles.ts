@@ -9,11 +9,14 @@ export interface DiscoveryArticle {
   readTime: number;
   trendingScore: number;
   content: Array<{
-    type: 'heading' | 'paragraph' | 'list' | 'image';
+    type: 'heading' | 'paragraph' | 'list' | 'image' | 'product';
     text?: string;
     items?: string[];
     src?: string;
     alt?: string;
+    name?: string;
+    price?: string;
+    amazonLink?: string;
   }>;
 }
 

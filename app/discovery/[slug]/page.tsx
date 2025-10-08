@@ -111,6 +111,31 @@ export default function DiscoveryArticlePage({ params }: { params: Promise<{ slu
                     ))}
                   </ul>
                 )}
+                {section.type === 'product' && (
+                  <div className="my-6 p-6 bg-gradient-to-r from-orange-50 to-yellow-50 border-2 border-orange-300 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">
+                          {section.name}
+                        </h3>
+                        <p className="text-2xl font-bold text-orange-600">
+                          {section.price}
+                        </p>
+                      </div>
+                      <a
+                        href={section.amazonLink}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold text-lg rounded-xl hover:from-orange-600 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg"
+                      >
+                        <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M13.5 2C13.5 2 17.5 2.1 17.5 5.5C17.5 8.9 13.5 9 13.5 9M13.5 9C13.5 9 9.5 8.9 9.5 5.5C9.5 2.1 13.5 2 13.5 2M13.5 2V22M4 17L13.5 22L23 17M13.5 9L4 13.5M13.5 9L23 13.5" />
+                        </svg>
+                        View on Amazon
+                      </a>
+                    </div>
+                  </div>
+                )}
                 {section.type === 'image' && section.src && (
                   <div className="relative h-96 rounded-2xl overflow-hidden my-8">
                     <Image
