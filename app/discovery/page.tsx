@@ -36,7 +36,7 @@ export default function DiscoveryPage() {
       />
 
       {/* Main Content with Sidebar */}
-      <section className="py-12 px-6">
+      <section className="py-8 md:py-12 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Articles Grid */}
