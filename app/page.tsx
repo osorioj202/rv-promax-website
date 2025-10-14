@@ -184,21 +184,21 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-1.5 h-0 group-hover:h-full bg-gradient-to-b from-blue-500 via-purple-600 to-pink-500 transition-all duration-400"></div>
                 
                 <Link href={`/articles/${article.slug}`} className="block h-full">
-                  <div className="p-6 relative">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="text-5xl drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-4 sm:p-6 relative">
+                    <div className="flex items-start gap-3 sm:gap-4 mb-4">
+                      <div className="text-4xl sm:text-5xl drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
                         {getCategoryIcon(article.title)}
                       </div>
                       <div className="flex-1">
-                        <div className="flex flex-col gap-2 mb-2">
-                          <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold inline-block self-start shadow-md">
+                        <div className="flex flex-col gap-1.5 sm:gap-2 mb-2">
+                          <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs font-bold inline-block self-start shadow-md">
                             #{index + 1} Most Popular
                           </span>
-                          <span className="text-pink-600 text-sm font-bold flex items-center gap-1">
-                            📊 {article.monthlySearches.toLocaleString()}/mo searches
+                          <span className="text-pink-600 text-xs sm:text-sm font-bold flex items-center gap-1">
+                            📊 {article.monthlySearches.toLocaleString()}/mo
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
                           {article.title}
                         </h3>
                       </div>
@@ -209,15 +209,15 @@ export default function Home() {
                       Complete with product recommendations, installation tips, and maintenance advice.
                     </p>
                     
-                    <div className="flex items-center justify-between pt-4 border-t-2 border-dashed border-gray-200">
-                      <div className="flex items-center gap-2 text-sm text-gray-700 font-semibold">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 pt-4 border-t-2 border-dashed border-gray-200">
+                      <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-700 font-semibold">
                         <span className="flex items-center gap-1">
                           ⭐ 4.9/5
                         </span>
                         <span>•</span>
                         <span>Expert Guide</span>
                       </div>
-                      <div className="flex items-center gap-1 text-blue-600 font-bold group-hover:gap-2 transition-all">
+                      <div className="flex items-center gap-1 text-blue-600 font-bold group-hover:gap-2 transition-all text-sm sm:text-base">
                         Read Guide
                         <span className="group-hover:translate-x-1 transition-transform">→</span>
                       </div>
