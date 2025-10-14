@@ -178,43 +178,48 @@ export default function Home() {
             {featuredArticles.map((article, index) => (
               <article
                 key={article.slug}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden article-card"
+                className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-400 transform hover:translate-x-2 border-2 border-gray-200 hover:border-blue-500 overflow-hidden relative"
               >
+                {/* Borde izquierdo animado con gradiente */}
+                <div className="absolute top-0 left-0 w-1.5 h-0 group-hover:h-full bg-gradient-to-b from-blue-500 via-purple-600 to-pink-500 transition-all duration-400"></div>
+                
                 <Link href={`/articles/${article.slug}`} className="block h-full">
-                  <div className="p-8">
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="text-4xl">{getCategoryIcon(article.title)}</div>
+                  <div className="p-6 relative">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="text-5xl drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        {getCategoryIcon(article.title)}
+                      </div>
                       <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-3">
-                          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <div className="flex flex-col gap-2 mb-2">
+                          <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold inline-block self-start shadow-md">
                             #{index + 1} Most Popular
                           </span>
-                          <span className="text-gray-500 text-sm">
-                            {article.monthlySearches.toLocaleString()}/mo
+                          <span className="text-pink-600 text-sm font-bold flex items-center gap-1">
+                            📊 {article.monthlySearches.toLocaleString()}/mo searches
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 leading-tight">
+                        <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
                           {article.title}
                         </h3>
                       </div>
                     </div>
                     
-                    <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed mb-6">
+                    <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed mb-4">
                       Expert guide covering everything you need to know about {article.targetKeyword || 'RV essentials'} for RV owners. 
                       Complete with product recommendations, installation tips, and maintenance advice.
                     </p>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <div className="flex items-center justify-between pt-4 border-t-2 border-dashed border-gray-200">
+                      <div className="flex items-center gap-2 text-sm text-gray-700 font-semibold">
                         <span className="flex items-center gap-1">
                           ⭐ 4.9/5
                         </span>
                         <span>•</span>
                         <span>Expert Guide</span>
                       </div>
-                      <div className="flex items-center gap-1 text-blue-600 font-semibold">
+                      <div className="flex items-center gap-1 text-blue-600 font-bold group-hover:gap-2 transition-all">
                         Read Guide
-                        <span>→</span>
+                        <span className="group-hover:translate-x-1 transition-transform">→</span>
                       </div>
                     </div>
                   </div>
