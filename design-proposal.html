@@ -70,6 +70,13 @@
             0% { background-position: -200% -200%; }
             100% { background-position: 200% 200%; }
         }
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            to { box-shadow: 0 0 30px rgba(20, 184, 166, 0.4), 0 0 40px rgba(59, 130, 246, 0.2); }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -78,7 +85,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 gradient-card rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300 glow-effect">
+                    <div class="w-12 h-12 gradient-card rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300 pulse-glow">
                         <svg viewBox="0 0 40 40" class="w-8 h-8 text-white">
                             <path d="M2 22 L6 16 L10 18 L14 12 L18 14 L22 8 L26 10 L30 6 L34 8 L38 4 L38 22 Z" fill="currentColor" opacity="0.4"/>
                             <rect x="8" y="12" width="24" height="12" fill="currentColor" rx="1"/>
@@ -101,73 +108,83 @@
     </header>
 
     <div class="max-w-7xl mx-auto px-6 py-8">
-        <h1 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-rv-blue-600 to-rv-teal-600 bg-clip-text text-transparent">
-            🎨 Propuesta de Diseño Mejorado - RV-Pro Max
-        </h1>
+        <div class="text-center mb-8">
+            <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-rv-blue-600 to-rv-teal-600 bg-clip-text text-transparent">
+                🎨 Propuesta de Diseño Mejorado
+            </h1>
+            <p class="text-xl text-gray-600">RV-Pro Max - Optimizado para Conversiones</p>
+        </div>
         
-        <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4 text-gray-800">🎯 Objetivos de la Mejora</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <div class="text-green-600 font-semibold">📈 Conversiones</div>
-                    <div class="text-sm text-green-700">Aumentar clicks en productos</div>
+        <!-- Objetivos -->
+        <div class="gradient-card text-white rounded-2xl p-8 mb-12 pulse-glow">
+            <h2 class="text-3xl font-bold mb-6 text-center">🎯 Objetivos de la Mejora</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-3">📈</div>
+                    <div class="font-bold text-lg mb-2">+25% Conversiones</div>
+                    <div class="text-sm opacity-90">Más clicks en productos Amazon</div>
                 </div>
-                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <div class="text-blue-600 font-semibold">👁️ Atención Visual</div>
-                    <div class="text-sm text-blue-700">Diseño más llamativo</div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-3">👁️</div>
+                    <div class="font-bold text-lg mb-2">Atención Visual</div>
+                    <div class="text-sm opacity-90">Diseño más llamativo y premium</div>
                 </div>
-                <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                    <div class="text-purple-600 font-semibold">🎨 Cohesión</div>
-                    <div class="text-sm text-purple-700">Colores consistentes</div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-3">🎨</div>
+                    <div class="font-bold text-lg mb-2">Cohesión de Marca</div>
+                    <div class="text-sm opacity-90">Colores consistentes en todo el sitio</div>
                 </div>
             </div>
         </div>
 
         <!-- Sección: Productos Destacados Mejorados -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">🛍️ Productos Destacados - Nuevo Diseño</h2>
+        <section class="mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">🛍️ Productos Destacados - Nuevo Diseño</h2>
+                <p class="text-lg text-gray-600">Botones más llamativos = Más clicks = Más comisiones</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Producto 1 - Diseño Mejorado -->
                 <div class="gradient-border card-hover">
                     <div class="bg-white rounded-xl p-6 h-full">
-                        <div class="relative mb-4">
-                            <div class="h-48 bg-gradient-to-br from-rv-blue-50 to-rv-teal-50 rounded-lg flex items-center justify-center overflow-hidden">
-                                <div class="w-32 h-32 bg-gradient-to-br from-rv-blue-200 to-rv-teal-200 rounded-lg flex items-center justify-center">
-                                    <span class="text-4xl">🚐</span>
+                        <div class="relative mb-6">
+                            <div class="h-48 bg-gradient-to-br from-rv-blue-50 to-rv-teal-50 rounded-xl flex items-center justify-center overflow-hidden">
+                                <div class="w-32 h-32 bg-gradient-to-br from-rv-blue-200 to-rv-teal-200 rounded-xl flex items-center justify-center shadow-lg">
+                                    <span class="text-5xl">🚰</span>
                                 </div>
                             </div>
-                            <div class="absolute top-2 right-2 bg-gradient-to-r from-orange-400 to-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                            <div class="absolute top-3 right-3 bg-gradient-to-r from-orange-400 to-red-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                                 🔥 Trending
                             </div>
                         </div>
                         
-                        <div class="space-y-3">
-                            <h3 class="font-bold text-lg text-gray-800 line-clamp-2">
+                        <div class="space-y-4">
+                            <h3 class="font-bold text-xl text-gray-800 line-clamp-2 leading-tight">
                                 Premium RV Water Filter System
                             </h3>
                             
                             <div class="flex items-center gap-2">
-                                <div class="flex text-yellow-400">
+                                <div class="flex text-yellow-400 text-lg">
                                     ⭐⭐⭐⭐⭐
                                 </div>
-                                <span class="text-sm text-gray-600">(2,847 reviews)</span>
+                                <span class="text-sm text-gray-600 font-medium">(2,847 reviews)</span>
                             </div>
                             
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <span class="text-2xl font-bold text-rv-blue-600">$89.99</span>
-                                    <span class="text-sm text-gray-500 line-through ml-2">$129.99</span>
+                                    <span class="text-3xl font-bold text-rv-blue-600">$89.99</span>
+                                    <span class="text-lg text-gray-500 line-through ml-2">$129.99</span>
                                 </div>
-                                <div class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                                <div class="bg-green-100 text-green-800 px-3 py-2 rounded-full text-sm font-bold border border-green-300">
                                     31% OFF
                                 </div>
                             </div>
                             
-                            <button class="w-full gradient-card text-white font-bold py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                                <div class="flex items-center justify-center gap-2">
-                                    <span>Ver en Amazon</span>
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <button class="w-full gradient-card text-white font-bold py-4 px-6 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 pulse-glow">
+                                <div class="flex items-center justify-center gap-3">
+                                    <span class="text-lg">Ver en Amazon</span>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                     </svg>
                                 </div>
@@ -179,43 +196,43 @@
                 <!-- Producto 2 -->
                 <div class="gradient-border card-hover">
                     <div class="bg-white rounded-xl p-6 h-full">
-                        <div class="relative mb-4">
-                            <div class="h-48 bg-gradient-to-br from-rv-blue-50 to-rv-teal-50 rounded-lg flex items-center justify-center">
-                                <div class="w-32 h-32 bg-gradient-to-br from-rv-blue-200 to-rv-teal-200 rounded-lg flex items-center justify-center">
-                                    <span class="text-4xl">⚡</span>
+                        <div class="relative mb-6">
+                            <div class="h-48 bg-gradient-to-br from-rv-blue-50 to-rv-teal-50 rounded-xl flex items-center justify-center">
+                                <div class="w-32 h-32 bg-gradient-to-br from-rv-blue-200 to-rv-teal-200 rounded-xl flex items-center justify-center shadow-lg">
+                                    <span class="text-5xl">⚡</span>
                                 </div>
                             </div>
-                            <div class="absolute top-2 right-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-2 py-1 rounded-full text-xs font-bold">
+                            <div class="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                                 ⭐ Bestseller
                             </div>
                         </div>
                         
-                        <div class="space-y-3">
-                            <h3 class="font-bold text-lg text-gray-800 line-clamp-2">
+                        <div class="space-y-4">
+                            <h3 class="font-bold text-xl text-gray-800 line-clamp-2 leading-tight">
                                 Solar Power Inverter 2000W
                             </h3>
                             
                             <div class="flex items-center gap-2">
-                                <div class="flex text-yellow-400">
+                                <div class="flex text-yellow-400 text-lg">
                                     ⭐⭐⭐⭐⭐
                                 </div>
-                                <span class="text-sm text-gray-600">(1,523 reviews)</span>
+                                <span class="text-sm text-gray-600 font-medium">(1,523 reviews)</span>
                             </div>
                             
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <span class="text-2xl font-bold text-rv-blue-600">$249.99</span>
-                                    <span class="text-sm text-gray-500 line-through ml-2">$299.99</span>
+                                    <span class="text-3xl font-bold text-rv-blue-600">$249.99</span>
+                                    <span class="text-lg text-gray-500 line-through ml-2">$299.99</span>
                                 </div>
-                                <div class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                                <div class="bg-green-100 text-green-800 px-3 py-2 rounded-full text-sm font-bold border border-green-300">
                                     17% OFF
                                 </div>
                             </div>
                             
-                            <button class="w-full gradient-card text-white font-bold py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                                <div class="flex items-center justify-center gap-2">
-                                    <span>Ver en Amazon</span>
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <button class="w-full gradient-card text-white font-bold py-4 px-6 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 pulse-glow">
+                                <div class="flex items-center justify-center gap-3">
+                                    <span class="text-lg">Ver en Amazon</span>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                     </svg>
                                 </div>
@@ -227,44 +244,44 @@
                 <!-- Producto 3 -->
                 <div class="gradient-border card-hover">
                     <div class="bg-white rounded-xl p-6 h-full">
-                        <div class="relative mb-4">
-                            <div class="h-48 bg-gradient-to-br from-rv-blue-50 to-rv-teal-50 rounded-lg flex items-center justify-center">
-                                <div class="w-32 h-32 bg-gradient-to-br from-rv-blue-200 to-rv-teal-200 rounded-lg flex items-center justify-center">
-                                    <span class="text-4xl">🛏️</span>
+                        <div class="relative mb-6">
+                            <div class="h-48 bg-gradient-to-br from-rv-blue-50 to-rv-teal-50 rounded-xl flex items-center justify-center">
+                                <div class="w-32 h-32 bg-gradient-to-br from-rv-blue-200 to-rv-teal-200 rounded-xl flex items-center justify-center shadow-lg">
+                                    <span class="text-5xl">🛏️</span>
                                 </div>
                             </div>
-                            <div class="absolute top-2 right-2 bg-gradient-to-r from-green-500 to-teal-600 text-white px-2 py-1 rounded-full text-xs font-bold">
+                            <div class="absolute top-3 right-3 bg-gradient-to-r from-green-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                                 💰 Deal
                             </div>
                         </div>
                         
-                        <div class="space-y-3">
-                            <h3 class="font-bold text-lg text-gray-800 line-clamp-2">
+                        <div class="space-y-4">
+                            <h3 class="font-bold text-xl text-gray-800 line-clamp-2 leading-tight">
                                 Memory Foam RV Mattress Queen
                             </h3>
                             
                             <div class="flex items-center gap-2">
-                                <div class="flex text-yellow-400">
+                                <div class="flex text-yellow-400 text-lg">
                                     ⭐⭐⭐⭐⭐
                                 </div>
-                                <span class="text-sm text-gray-600">(892 reviews)</span>
+                                <span class="text-sm text-gray-600 font-medium">(892 reviews)</span>
                             </div>
                             
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <span class="text-2xl font-bold text-rv-blue-600">$199.99</span>
-                                    <span class="text-sm text-gray-500 line-through ml-2">$279.99</span>
+                                    <span class="text-3xl font-bold text-rv-blue-600">$199.99</span>
+                                    <span class="text-lg text-gray-500 line-through ml-2">$279.99</span>
                                 </div>
-                                <div class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                                <div class="bg-green-100 text-green-800 px-3 py-2 rounded-full text-sm font-bold border border-green-300">
                                     29% OFF
                                 </div>
                             </div>
                             
-                            <button class="w-full gradient-card text-white font-bold py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                                <div class="flex items-center justify-center gap-2">
-                                    <span>Ver en Amazon</span>
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            <button class="w-full gradient-card text-white font-bold py-4 px-6 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 pulse-glow">
+                                <div class="flex items-center justify-center gap-3">
+                                    <span class="text-lg">Ver en Amazon</span>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                     </svg>
                                 </div>
                             </button>
@@ -275,34 +292,37 @@
         </section>
 
         <!-- Sección: Guías de Expertos Mejoradas -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">📚 Guías de Expertos - Nuevo Diseño</h2>
+        <section class="mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">📚 Guías de Expertos - Nuevo Diseño</h2>
+                <p class="text-lg text-gray-600">Más atractivas = Mayor engagement = Mejor SEO</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Guía 1 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-rv-blue-200 card-hover">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="text-4xl bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 p-3 rounded-xl">💧</div>
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-transparent hover:border-rv-blue-200 card-hover overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="text-5xl bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 p-4 rounded-2xl shadow-lg">💧</div>
                             <div class="flex-1">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <span class="bg-gradient-to-r from-rv-blue-500 to-rv-teal-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span class="bg-gradient-to-r from-rv-blue-500 to-rv-teal-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                                         #1 Most Popular
                                     </span>
-                                    <span class="text-gray-500 text-sm">12,500/mo</span>
+                                    <span class="text-gray-500 text-sm font-medium">12,500/mo</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2 line-clamp-2">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2 leading-tight">
                                     Best RV Water Filters 2025: Complete Buying Guide
                                 </h3>
                             </div>
                         </div>
                         
-                        <p class="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed">
+                        <p class="text-gray-600 text-sm line-clamp-3 mb-6 leading-relaxed">
                             Expert guide covering everything you need to know about RV water filtration systems. 
                             Complete with product recommendations, installation tips, and maintenance advice.
                         </p>
                         
-                        <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center justify-between mb-6">
                             <div class="flex items-center gap-2 text-sm text-gray-500">
                                 <span class="flex items-center gap-1">⭐ 4.9/5</span>
                                 <span>•</span>
@@ -312,39 +332,39 @@
                             </div>
                         </div>
                         
-                        <button class="w-full gradient-card text-white font-semibold py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                            <div class="flex items-center justify-center gap-2">
-                                <span>Leer Guía Completa</span>
-                                <span>→</span>
+                        <button class="w-full gradient-card text-white font-bold py-4 px-6 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 pulse-glow">
+                            <div class="flex items-center justify-center gap-3">
+                                <span class="text-lg">Leer Guía Completa</span>
+                                <span class="text-xl">→</span>
                             </div>
                         </button>
                     </div>
                 </div>
 
                 <!-- Guía 2 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-rv-blue-200 card-hover">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="text-4xl bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 p-3 rounded-xl">⚡</div>
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-transparent hover:border-rv-blue-200 card-hover overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="text-5xl bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 p-4 rounded-2xl shadow-lg">⚡</div>
                             <div class="flex-1">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <span class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                                         🔥 Trending
                                     </span>
-                                    <span class="text-gray-500 text-sm">8,900/mo</span>
+                                    <span class="text-gray-500 text-sm font-medium">8,900/mo</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2 line-clamp-2">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2 leading-tight">
                                     RV Solar Panel Installation: Step-by-Step Guide
                                 </h3>
                             </div>
                         </div>
                         
-                        <p class="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed">
+                        <p class="text-gray-600 text-sm line-clamp-3 mb-6 leading-relaxed">
                             Complete DIY guide for installing solar panels on your RV. Includes wiring diagrams, 
                             tool lists, and professional installation tips from certified technicians.
                         </p>
                         
-                        <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center justify-between mb-6">
                             <div class="flex items-center gap-2 text-sm text-gray-500">
                                 <span class="flex items-center gap-1">⭐ 4.8/5</span>
                                 <span>•</span>
@@ -354,39 +374,39 @@
                             </div>
                         </div>
                         
-                        <button class="w-full gradient-card text-white font-semibold py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                            <div class="flex items-center justify-center gap-2">
-                                <span>Leer Guía Completa</span>
-                                <span>→</span>
+                        <button class="w-full gradient-card text-white font-bold py-4 px-6 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 pulse-glow">
+                            <div class="flex items-center justify-center gap-3">
+                                <span class="text-lg">Leer Guía Completa</span>
+                                <span class="text-xl">→</span>
                             </div>
                         </button>
                     </div>
                 </div>
 
                 <!-- Guía 3 -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-rv-blue-200 card-hover">
-                    <div class="p-6">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="text-4xl bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 p-3 rounded-xl">🏕️</div>
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-transparent hover:border-rv-blue-200 card-hover overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="text-5xl bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 p-4 rounded-2xl shadow-lg">🏕️</div>
                             <div class="flex-1">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <span class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                                         #3 Popular
                                     </span>
-                                    <span class="text-gray-500 text-sm">6,750/mo</span>
+                                    <span class="text-gray-500 text-sm font-medium">6,750/mo</span>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-800 mb-2 line-clamp-2">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2 leading-tight">
                                     Essential RV Camping Gear Checklist 2025
                                 </h3>
                             </div>
                         </div>
                         
-                        <p class="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed">
+                        <p class="text-gray-600 text-sm line-clamp-3 mb-6 leading-relaxed">
                             Ultimate camping gear checklist with 50+ essential items for RV trips. 
                             Includes budget recommendations, storage tips, and seasonal considerations.
                         </p>
                         
-                        <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center justify-between mb-6">
                             <div class="flex items-center gap-2 text-sm text-gray-500">
                                 <span class="flex items-center gap-1">⭐ 4.9/5</span>
                                 <span>•</span>
@@ -396,10 +416,10 @@
                             </div>
                         </div>
                         
-                        <button class="w-full gradient-card text-white font-semibold py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                            <div class="flex items-center justify-center gap-2">
-                                <span>Leer Guía Completa</span>
-                                <span>→</span>
+                        <button class="w-full gradient-card text-white font-bold py-4 px-6 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 pulse-glow">
+                            <div class="flex items-center justify-center gap-3">
+                                <span class="text-lg">Leer Guía Completa</span>
+                                <span class="text-xl">→</span>
                             </div>
                         </button>
                     </div>
@@ -408,23 +428,26 @@
         </section>
 
         <!-- Sección: Categorías Mejoradas -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">🗂️ Categorías - Nuevo Diseño</h2>
+        <section class="mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">🗂️ Categorías - Nuevo Diseño</h2>
+                <p class="text-lg text-gray-600">Navegación más atractiva = Mejor experiencia de usuario</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Categoría 1 -->
                 <div class="group gradient-border card-hover">
-                    <div class="bg-white rounded-xl p-6 text-center h-full">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto">
+                    <div class="bg-white rounded-xl p-8 text-center h-full">
+                        <div class="text-6xl mb-6 group-hover:scale-125 transition-transform duration-500 bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 w-24 h-24 rounded-3xl flex items-center justify-center mx-auto shadow-lg">
                             🚐
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-rv-blue-600 transition-colors">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-rv-blue-600 transition-colors">
                             RV Accessories
                         </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                        <p class="text-gray-600 mb-6 leading-relaxed text-sm">
                             Essential accessories for every RV owner
                         </p>
-                        <div class="bg-gradient-to-r from-rv-blue-50 to-rv-teal-50 text-rv-blue-700 px-3 py-2 rounded-full text-sm font-semibold border border-rv-blue-200">
+                        <div class="bg-gradient-to-r from-rv-blue-50 to-rv-teal-50 text-rv-blue-700 px-4 py-3 rounded-full text-sm font-bold border-2 border-rv-blue-200 shadow-lg">
                             25+ Guides
                         </div>
                     </div>
@@ -432,17 +455,17 @@
 
                 <!-- Categoría 2 -->
                 <div class="group gradient-border card-hover">
-                    <div class="bg-white rounded-xl p-6 text-center h-full">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto">
+                    <div class="bg-white rounded-xl p-8 text-center h-full">
+                        <div class="text-6xl mb-6 group-hover:scale-125 transition-transform duration-500 bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 w-24 h-24 rounded-3xl flex items-center justify-center mx-auto shadow-lg">
                             ⚡
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-rv-blue-600 transition-colors">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-rv-blue-600 transition-colors">
                             Electrical & Electronics
                         </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                        <p class="text-gray-600 mb-6 leading-relaxed text-sm">
                             Power systems, batteries, and electronics
                         </p>
-                        <div class="bg-gradient-to-r from-rv-blue-50 to-rv-teal-50 text-rv-blue-700 px-3 py-2 rounded-full text-sm font-semibold border border-rv-blue-200">
+                        <div class="bg-gradient-to-r from-rv-blue-50 to-rv-teal-50 text-rv-blue-700 px-4 py-3 rounded-full text-sm font-bold border-2 border-rv-blue-200 shadow-lg">
                             15+ Guides
                         </div>
                     </div>
@@ -450,17 +473,17 @@
 
                 <!-- Categoría 3 -->
                 <div class="group gradient-border card-hover">
-                    <div class="bg-white rounded-xl p-6 text-center h-full">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto">
+                    <div class="bg-white rounded-xl p-8 text-center h-full">
+                        <div class="text-6xl mb-6 group-hover:scale-125 transition-transform duration-500 bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 w-24 h-24 rounded-3xl flex items-center justify-center mx-auto shadow-lg">
                             🏕️
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-rv-blue-600 transition-colors">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-rv-blue-600 transition-colors">
                             Camping Gear
                         </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                        <p class="text-gray-600 mb-6 leading-relaxed text-sm">
                             Outdoor equipment and camping essentials
                         </p>
-                        <div class="bg-gradient-to-r from-rv-blue-50 to-rv-teal-50 text-rv-blue-700 px-3 py-2 rounded-full text-sm font-semibold border border-rv-blue-200">
+                        <div class="bg-gradient-to-r from-rv-blue-50 to-rv-teal-50 text-rv-blue-700 px-4 py-3 rounded-full text-sm font-bold border-2 border-rv-blue-200 shadow-lg">
                             20+ Guides
                         </div>
                     </div>
@@ -468,17 +491,17 @@
 
                 <!-- Categoría 4 -->
                 <div class="group gradient-border card-hover">
-                    <div class="bg-white rounded-xl p-6 text-center h-full">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto">
+                    <div class="bg-white rounded-xl p-8 text-center h-full">
+                        <div class="text-6xl mb-6 group-hover:scale-125 transition-transform duration-500 bg-gradient-to-br from-rv-blue-100 to-rv-teal-100 w-24 h-24 rounded-3xl flex items-center justify-center mx-auto shadow-lg">
                             🔧
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-rv-blue-600 transition-colors">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-rv-blue-600 transition-colors">
                             Maintenance & Repair
                         </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                        <p class="text-gray-600 mb-6 leading-relaxed text-sm">
                             Keep your RV in perfect condition
                         </p>
-                        <div class="bg-gradient-to-r from-rv-blue-50 to-rv-teal-50 text-rv-blue-700 px-3 py-2 rounded-full text-sm font-semibold border border-rv-blue-200">
+                        <div class="bg-gradient-to-r from-rv-blue-50 to-rv-teal-50 text-rv-blue-700 px-4 py-3 rounded-full text-sm font-bold border-2 border-rv-blue-200 shadow-lg">
                             18+ Guides
                         </div>
                     </div>
@@ -487,65 +510,69 @@
         </section>
 
         <!-- Comparación Antes/Después -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">🔄 Comparación: Antes vs Después</h2>
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gray-800">🔄 Comparación: Antes vs Después</h2>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Antes -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold mb-4 text-red-600">❌ Diseño Actual</h3>
-                    <div class="space-y-3 text-sm">
-                        <div class="flex items-center gap-2">
-                            <span class="text-red-500">•</span>
-                            <span>Colores básicos (azul estándar)</span>
+                <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-red-200">
+                    <h3 class="text-2xl font-bold mb-6 text-red-600 text-center">❌ Diseño Actual</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-red-50 rounded-lg">
+                            <span class="text-red-500 text-xl">•</span>
+                            <span class="text-gray-700">Colores básicos (azul estándar)</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <span class="text-red-500">•</span>
-                            <span>Botones simples sin gradientes</span>
+                        <div class="flex items-center gap-3 p-3 bg-red-50 rounded-lg">
+                            <span class="text-red-500 text-xl">•</span>
+                            <span class="text-gray-700">Botones simples sin gradientes</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <span class="text-red-500">•</span>
-                            <span>Cards con sombras básicas</span>
+                        <div class="flex items-center gap-3 p-3 bg-red-50 rounded-lg">
+                            <span class="text-red-500 text-xl">•</span>
+                            <span class="text-gray-700">Cards con sombras básicas</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <span class="text-red-500">•</span>
-                            <span>Efectos hover limitados</span>
+                        <div class="flex items-center gap-3 p-3 bg-red-50 rounded-lg">
+                            <span class="text-red-500 text-xl">•</span>
+                            <span class="text-gray-700">Efectos hover limitados</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <span class="text-red-500">•</span>
-                            <span>Falta de cohesión visual</span>
+                        <div class="flex items-center gap-3 p-3 bg-red-50 rounded-lg">
+                            <span class="text-red-500 text-xl">•</span>
+                            <span class="text-gray-700">Falta de cohesión visual</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-red-50 rounded-lg">
+                            <span class="text-red-500 text-xl">•</span>
+                            <span class="text-gray-700">Menor atención visual</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Después -->
-                <div class="gradient-border">
-                    <div class="bg-white rounded-xl p-6">
-                        <h3 class="text-xl font-bold mb-4 text-green-600">✅ Nuevo Diseño</h3>
-                        <div class="space-y-3 text-sm">
-                            <div class="flex items-center gap-2">
-                                <span class="text-green-500">•</span>
-                                <span>Gradientes azul-teal consistentes</span>
+                <div class="gradient-border pulse-glow">
+                    <div class="bg-white rounded-xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-green-600 text-center">✅ Nuevo Diseño</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                <span class="text-green-500 text-xl">•</span>
+                                <span class="text-gray-700">Gradientes azul-teal consistentes</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <span class="text-green-500">•</span>
-                                <span>Bordes con gradientes llamativos</span>
+                            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                <span class="text-green-500 text-xl">•</span>
+                                <span class="text-gray-700">Bordes con gradientes llamativos</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <span class="text-green-500">•</span>
-                                <span>Efectos glow y sombras mejoradas</span>
+                            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                <span class="text-green-500 text-xl">•</span>
+                                <span class="text-gray-700">Efectos glow y sombras mejoradas</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <span class="text-green-500">•</span>
-                                <span>Animaciones suaves y atractivas</span>
+                            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                <span class="text-green-500 text-xl">•</span>
+                                <span class="text-gray-700">Animaciones suaves y atractivas</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <span class="text-green-500">•</span>
-                                <span>Cohesión visual total</span>
+                            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                <span class="text-green-500 text-xl">•</span>
+                                <span class="text-gray-700">Cohesión visual total</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <span class="text-green-500">•</span>
-                                <span>Mayor atención visual = más clicks</span>
+                            <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                <span class="text-green-500 text-xl">•</span>
+                                <span class="text-gray-700 font-bold">Mayor atención visual = más clicks</span>
                             </div>
                         </div>
                     </div>
@@ -554,92 +581,100 @@
         </section>
 
         <!-- Métricas de Conversión Esperadas -->
-        <section class="mb-12">
-            <div class="gradient-card text-white rounded-2xl p-8 text-center">
-                <h2 class="text-3xl font-bold mb-6">📈 Impacto Esperado en Conversiones</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                        <div class="text-4xl font-bold mb-2">+25%</div>
-                        <div class="text-lg">Clicks en Productos</div>
-                        <div class="text-sm opacity-80 mt-1">Botones más llamativos</div>
+        <section class="mb-16">
+            <div class="gradient-card text-white rounded-3xl p-12 text-center pulse-glow">
+                <h2 class="text-4xl font-bold mb-8">📈 Impacto Esperado en Conversiones</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/30 transition-all duration-300">
+                        <div class="text-5xl font-bold mb-4">+25%</div>
+                        <div class="text-xl font-semibold mb-2">Clicks en Productos</div>
+                        <div class="text-sm opacity-90">Botones más llamativos y atractivos</div>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                        <div class="text-4xl font-bold mb-2">+18%</div>
-                        <div class="text-lg">Engagement</div>
-                        <div class="text-sm opacity-80 mt-1">Mejor experiencia visual</div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/30 transition-all duration-300">
+                        <div class="text-5xl font-bold mb-4">+18%</div>
+                        <div class="text-xl font-semibold mb-2">Engagement</div>
+                        <div class="text-sm opacity-90">Mejor experiencia visual general</div>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                        <div class="text-4xl font-bold mb-2">+12%</div>
-                        <div class="text-lg">Tiempo en Página</div>
-                        <div class="text-sm opacity-80 mt-1">Diseño más atractivo</div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/30 transition-all duration-300">
+                        <div class="text-5xl font-bold mb-4">+12%</div>
+                        <div class="text-xl font-semibold mb-2">Tiempo en Página</div>
+                        <div class="text-sm opacity-90">Diseño más atractivo y profesional</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Implementación Recomendada -->
-        <section class="bg-white rounded-2xl shadow-lg p-8">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">🚀 Plan de Implementación</h2>
+        <section class="bg-white rounded-3xl shadow-2xl p-12 border-2 border-gray-100">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gray-800">🚀 Plan de Implementación</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-rv-blue-600">🎯 Cambios Clave</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-rv-blue-500 rounded-full"></span>
-                            <span>Gradientes azul-teal en todos los botones</span>
+                    <h3 class="text-2xl font-bold mb-6 text-rv-blue-600">🎯 Cambios Clave</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                            <span class="w-3 h-3 bg-rv-blue-500 rounded-full"></span>
+                            <span class="text-gray-700">Gradientes azul-teal en todos los botones</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-rv-blue-500 rounded-full"></span>
-                            <span>Bordes con gradientes en cards</span>
+                        <li class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                            <span class="w-3 h-3 bg-rv-blue-500 rounded-full"></span>
+                            <span class="text-gray-700">Bordes con gradientes en cards</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-rv-blue-500 rounded-full"></span>
-                            <span>Efectos hover mejorados</span>
+                        <li class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                            <span class="w-3 h-3 bg-rv-blue-500 rounded-full"></span>
+                            <span class="text-gray-700">Efectos hover mejorados</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-rv-blue-500 rounded-full"></span>
-                            <span>Badges de trending más llamativos</span>
+                        <li class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                            <span class="w-3 h-3 bg-rv-blue-500 rounded-full"></span>
+                            <span class="text-gray-700">Badges de trending más llamativos</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-rv-blue-500 rounded-full"></span>
-                            <span>Backgrounds con gradientes suaves</span>
+                        <li class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                            <span class="w-3 h-3 bg-rv-blue-500 rounded-full"></span>
+                            <span class="text-gray-700">Backgrounds con gradientes suaves</span>
                         </li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-green-600">✅ Beneficios</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                            <span>Mayor atención visual</span>
+                    <h3 class="text-2xl font-bold mb-6 text-green-600">✅ Beneficios</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span class="text-gray-700">Mayor atención visual</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                            <span>Cohesión de marca mejorada</span>
+                        <li class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span class="text-gray-700">Cohesión de marca mejorada</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                            <span>Experiencia premium</span>
+                        <li class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span class="text-gray-700">Experiencia premium</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                            <span>Conversiones optimizadas</span>
+                        <li class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span class="text-gray-700">Conversiones optimizadas</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                            <span>Diferenciación competitiva</span>
+                        <li class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span class="text-gray-700">Diferenciación competitiva</span>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <div class="gradient-card text-white font-bold py-6 px-12 rounded-2xl inline-block pulse-glow">
+                    <div class="text-2xl mb-2">🎯 ¿Listo para implementar?</div>
+                    <div class="text-lg opacity-90">Este diseño puede aumentar tus conversiones significativamente</div>
                 </div>
             </div>
         </section>
     </div>
 
     <script>
-        // Animación de shimmer para los botones
+        // Animaciones interactivas
         document.addEventListener('DOMContentLoaded', function() {
+            // Efecto shimmer en botones
             const buttons = document.querySelectorAll('.gradient-card');
             buttons.forEach(button => {
                 button.addEventListener('mouseenter', function() {
@@ -651,6 +686,17 @@
                 button.addEventListener('mouseleave', function() {
                     this.style.background = 'linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%)';
                     this.style.animation = 'none';
+                });
+            });
+
+            // Efecto de parallax suave
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallax = document.querySelectorAll('.pulse-glow');
+                
+                parallax.forEach(element => {
+                    const speed = 0.5;
+                    element.style.transform = `translateY(${scrolled * speed}px)`;
                 });
             });
         });
