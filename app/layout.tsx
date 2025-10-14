@@ -72,6 +72,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preconnect to external domains for better performance */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        
         {/* Google AdSense - Descomenta cuando tengas tu código */}
         {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossOrigin="anonymous"></script> */}
         
@@ -121,12 +125,12 @@ export default function RootLayout({
           <Footer />
         </div>
         
-        {/* Google Analytics */}
+        {/* Google Analytics - Lazy loaded for better performance */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NWNG00LNYB"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

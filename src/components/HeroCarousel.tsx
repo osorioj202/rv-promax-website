@@ -62,7 +62,10 @@ export default function HeroCarousel() {
               fill
               className="object-cover object-center"
               priority={index === 0}
-              quality={85}
+              fetchPriority={index === 0 ? 'high' : 'low'}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              quality={75}
+              sizes="100vw"
             />
             
             {/* Overlay for text readability - optimized for square images */}

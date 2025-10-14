@@ -196,7 +196,9 @@ export default function HeroFeaturedProducts() {
                       alt={product.name}
                       fill
                       className="object-contain drop-shadow-2xl group-hover:scale-125 group-hover:rotate-3 transition-all duration-500"
-                      quality={85}
+                      loading="lazy"
+                      quality={75}
+                      sizes="(max-width: 640px) 112px, 128px"
                     />
                   </div>
                   
