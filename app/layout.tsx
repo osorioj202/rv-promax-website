@@ -125,17 +125,20 @@ export default function RootLayout({
           <Footer />
         </div>
         
-        {/* Google Analytics - Lazy loaded for better performance */}
+        {/* 🚀 OPTIMIZED Google Analytics - After interactive for better performance */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NWNG00LNYB"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-NWNG00LNYB');
+            gtag('config', 'G-NWNG00LNYB', {
+              page_title: document.title,
+              page_location: window.location.href
+            });
           `}
         </Script>
       </body>

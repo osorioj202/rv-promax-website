@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -84,27 +84,28 @@ export default function HeroFeaturedProducts() {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [visibleProducts, setVisibleProducts] = useState(3);
 
+  // 🚀 OPTIMIZED: Memoized resize handler
+  const updateVisibleProducts = useCallback(() => {
+    const width = window.innerWidth;
+    if (width < 640) { // Mobile
+      setVisibleProducts(1);
+    } else if (width < 768) { // Small tablet
+      setVisibleProducts(2);
+    } else if (width < 1024) { // Tablet
+      setVisibleProducts(3);
+    } else if (width < 1280) { // Desktop
+      setVisibleProducts(4);
+    } else { // Large desktop
+      setVisibleProducts(5);
+    }
+  }, []);
+
   // Calculate visible products based on screen size
   useEffect(() => {
-    const updateVisibleProducts = () => {
-      const width = window.innerWidth;
-      if (width < 640) { // Mobile
-        setVisibleProducts(1);
-      } else if (width < 768) { // Small tablet
-        setVisibleProducts(2);
-      } else if (width < 1024) { // Tablet
-        setVisibleProducts(3);
-      } else if (width < 1280) { // Desktop
-        setVisibleProducts(4);
-      } else { // Large desktop
-        setVisibleProducts(5);
-      }
-    };
-
     updateVisibleProducts();
     window.addEventListener('resize', updateVisibleProducts);
     return () => window.removeEventListener('resize', updateVisibleProducts);
-  }, []);
+  }, [updateVisibleProducts]);
 
   // Reset index when all products are visible
   useEffect(() => {
@@ -129,30 +130,31 @@ export default function HeroFeaturedProducts() {
     return () => clearInterval(interval);
   }, [visibleProducts]);
 
-  const goToSlide = (index: number) => {
+  // 🚀 OPTIMIZED: Memoized slide functions
+  const goToSlide = useCallback((index: number) => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex(index);
     setTimeout(() => setIsTransitioning(false), 500);
-  };
+  }, [isTransitioning]);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     const maxIndex = Math.max(0, featuredProducts.length - visibleProducts);
     if (currentIndex >= maxIndex) {
       goToSlide(0);
     } else {
       goToSlide(currentIndex + 1);
     }
-  };
+  }, [currentIndex, visibleProducts, goToSlide]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     const maxIndex = Math.max(0, featuredProducts.length - visibleProducts);
     if (currentIndex <= 0) {
       goToSlide(maxIndex);
     } else {
       goToSlide(currentIndex - 1);
     }
-  };
+  }, [currentIndex, visibleProducts, goToSlide]);
 
   return (
     <div className="relative w-full max-w-6xl mx-auto">

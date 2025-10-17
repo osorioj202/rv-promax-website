@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import Head from 'next/head';
 import articles from '@/lib/articles-comprehensive.json';
 import HeroCarousel from '@/components/HeroCarousel';
@@ -11,16 +11,20 @@ import HeroSearch from '@/components/HeroSearch';
 export default function Home() {
   const [featuredArticles, setFeaturedArticles] = useState([]);
 
-  useEffect(() => {
-    // Get top articles by monthly searches and diverse categories
-    const topArticles = articles
+  // 🚀 OPTIMIZED: Memoized article processing
+  const processedArticles = useMemo(() => {
+    return articles
       .filter(article => article.monthlySearches > 0)
       .sort((a, b) => b.monthlySearches - a.monthlySearches)
       .slice(0, 6);
-    setFeaturedArticles(topArticles);
   }, []);
 
-  const getCategoryIcon = (title: string) => {
+  useEffect(() => {
+    setFeaturedArticles(processedArticles);
+  }, [processedArticles]);
+
+  // 🚀 OPTIMIZED: Memoized icon functions
+  const getCategoryIcon = useCallback((title: string) => {
     const titleLower = title.toLowerCase();
     if (titleLower.includes('water') || titleLower.includes('filter')) return '💧';
     if (titleLower.includes('electrical') || titleLower.includes('power') || titleLower.includes('solar')) return '⚡';
@@ -31,9 +35,9 @@ export default function Home() {
     if (titleLower.includes('furniture') || titleLower.includes('interior')) return '🪑';
     if (titleLower.includes('outdoor') || titleLower.includes('recreation')) return '🎯';
     return '🚐';
-  };
+  }, []);
 
-  const getCategoryIconForSection = (title: string) => {
+  const getCategoryIconForSection = useCallback((title: string) => {
     const titleLower = title.toLowerCase();
     if (titleLower.includes('rv accessories')) return '🚐';
     if (titleLower.includes('electrical')) return '⚡';
@@ -46,7 +50,7 @@ export default function Home() {
     if (titleLower.includes('covers')) return '🛡️';
     if (titleLower.includes('general rv')) return '🏠';
     return '📦';
-  };
+  }, []);
 
   return (
     <>
@@ -178,48 +182,43 @@ export default function Home() {
             {featuredArticles.map((article, index) => (
               <article
                 key={article.slug}
-                className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-400 transform hover:translate-x-2 border-2 border-gray-200 hover:border-blue-500 overflow-hidden relative"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden article-card"
               >
-                {/* Borde izquierdo animado con gradiente */}
-                <div className="absolute top-0 left-0 w-1.5 h-0 group-hover:h-full bg-gradient-to-b from-blue-500 via-purple-600 to-pink-500 transition-all duration-400"></div>
-                
                 <Link href={`/articles/${article.slug}`} className="block h-full">
-                  <div className="p-4 sm:p-6 relative">
-                    <div className="flex items-start gap-3 sm:gap-4 mb-4">
-                      <div className="text-4xl sm:text-5xl drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        {getCategoryIcon(article.title)}
-                      </div>
+                  <div className="p-8">
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="text-4xl">{getCategoryIcon(article.title)}</div>
                       <div className="flex-1">
-                        <div className="flex flex-col gap-1.5 sm:gap-2 mb-2">
-                          <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs font-bold inline-block self-start shadow-md">
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                             #{index + 1} Most Popular
                           </span>
-                          <span className="text-pink-600 text-xs sm:text-sm font-bold flex items-center gap-1">
-                            📊 {article.monthlySearches.toLocaleString()}/mo
+                          <span className="text-gray-500 text-sm">
+                            {article.monthlySearches.toLocaleString()}/mo
                           </span>
                         </div>
-                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 leading-tight">
                           {article.title}
                         </h3>
                       </div>
                     </div>
                     
-                    <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed mb-4">
+                    <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed mb-6">
                       Expert guide covering everything you need to know about {article.targetKeyword || 'RV essentials'} for RV owners. 
                       Complete with product recommendations, installation tips, and maintenance advice.
                     </p>
                     
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 pt-4 border-t-2 border-dashed border-gray-200">
-                      <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-700 font-semibold">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-sm text-gray-500">
                         <span className="flex items-center gap-1">
                           ⭐ 4.9/5
                         </span>
                         <span>•</span>
                         <span>Expert Guide</span>
                       </div>
-                      <div className="flex items-center gap-1 text-blue-600 font-bold group-hover:gap-2 transition-all text-sm sm:text-base">
+                      <div className="flex items-center gap-1 text-blue-600 font-semibold">
                         Read Guide
-                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                        <span>→</span>
                       </div>
                     </div>
                   </div>
@@ -241,25 +240,18 @@ export default function Home() {
       </section>
 
       {/* Enhanced Categories Section */}
-      <section className="relative py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 overflow-hidden">
-        {/* Patrón de fondo decorativo */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-40 h-40 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-white rounded-full blur-2xl"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4 drop-shadow-lg">
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Explore by Category
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Find exactly what you need with our comprehensive category guides
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {[
               { href: '/rv-accessories', title: 'RV Accessories', desc: 'Essential accessories for every RV owner', count: '25+ Guides' },
               { href: '/electrical-electronics', title: 'Electrical & Electronics', desc: 'Power systems, batteries, and electronics', count: '15+ Guides' },
@@ -275,20 +267,16 @@ export default function Home() {
               <Link
                 key={cat.href}
                 href={cat.href}
-                className="group relative bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border-2 border-white/50 hover:border-white text-center overflow-hidden"
+                className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center category-button"
               >
-                {/* Borde superior con gradiente animado */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                
-                <div className="text-5xl sm:text-6xl mb-3 sm:mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 drop-shadow-lg">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {getCategoryIconForSection(cat.title)}
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
                   {cat.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">{cat.desc}</p>
-                <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg group-hover:shadow-xl group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
-                  <span>📚</span>
+                <p className="text-gray-600 mb-4 leading-relaxed">{cat.desc}</p>
+                <div className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block">
                   {cat.count}
                 </div>
               </Link>

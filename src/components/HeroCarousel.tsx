@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 interface HeroImage {
@@ -33,16 +33,18 @@ const heroImages: HeroImage[] = [
 export default function HeroCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-rotate every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
+  // 🚀 OPTIMIZED: Memoized auto-rotate function
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+    );
   }, []);
+
+  // Auto-rotate every 5 seconds - optimized with useCallback
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
 
 
   return (
@@ -62,10 +64,9 @@ export default function HeroCarousel() {
               fill
               className="object-cover object-center"
               priority={index === 0}
-              fetchPriority={index === 0 ? 'high' : 'low'}
-              loading={index === 0 ? 'eager' : 'lazy'}
-              quality={75}
+              quality={85}
               sizes="100vw"
+              loading={index === 0 ? "eager" : "lazy"}
             />
             
             {/* Overlay for text readability - optimized for square images */}
