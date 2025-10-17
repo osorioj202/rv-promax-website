@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 
 interface SearchSuggestion {
@@ -39,20 +39,29 @@ export default function HeroSearch() {
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Filter suggestions based on query
+  // 🚀 OPTIMIZED: Debounced search with memoization
+  const debouncedQuery = useMemo(() => {
+    const timeoutId = setTimeout(() => query, 150);
+    return () => clearTimeout(timeoutId);
+  }, [query]);
+
   useEffect(() => {
-    if (query.length > 1) {
-      const filtered = searchSuggestions.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.category.toLowerCase().includes(query.toLowerCase())
-      ).slice(0, 8); // Limit to 8 suggestions
-      setSuggestions(filtered);
-      setIsOpen(true);
-    } else {
-      setSuggestions([]);
-      setIsOpen(false);
-    }
-    setSelectedIndex(-1);
+    const timeoutId = setTimeout(() => {
+      if (query.length > 1) {
+        const filtered = searchSuggestions.filter(item =>
+          item.title.toLowerCase().includes(query.toLowerCase()) ||
+          item.category.toLowerCase().includes(query.toLowerCase())
+        ).slice(0, 8);
+        setSuggestions(filtered);
+        setIsOpen(true);
+      } else {
+        setSuggestions([]);
+        setIsOpen(false);
+      }
+      setSelectedIndex(-1);
+    }, 150);
+
+    return () => clearTimeout(timeoutId);
   }, [query]);
 
   // Handle click outside to close suggestions
@@ -97,21 +106,22 @@ export default function HeroSearch() {
     }
   };
 
-  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+  // 🚀 OPTIMIZED: Memoized functions
+  const handleSuggestionClick = useCallback((suggestion: SearchSuggestion) => {
     setQuery(suggestion.title);
     setIsOpen(false);
     // Navigate to the suggestion URL
     window.location.href = suggestion.url;
-  };
+  }, []);
 
-  const getSuggestionIcon = (type: string) => {
+  const getSuggestionIcon = useCallback((type: string) => {
     switch (type) {
       case 'product': return '🛍️';
       case 'category': return '📂';
       case 'article': return '📄';
       default: return '🔍';
     }
-  };
+  }, []);
 
   return (
     <div ref={searchRef} className="relative w-full max-w-2xl mx-auto mb-6 md:mb-8 px-4 md:px-0">

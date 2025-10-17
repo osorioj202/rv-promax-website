@@ -4,7 +4,13 @@ import './globals.css';
 import Script from 'next/script';
 import Header from '../src/components/Header';
 
-const inter = Inter({ subsets: ['latin'] });
+// 🚀 OPTIMIZED: Font loading with display swap for better performance
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial']
+});
 
 export const metadata = {
   title: {
@@ -72,9 +78,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preconnect to external domains for better performance */}
+        {/* 🚀 OPTIMIZED: Critical resource hints for better performance */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://amzn.to" />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
         
         {/* Google AdSense - Descomenta cuando tengas tu código */}
         {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossOrigin="anonymous"></script> */}
