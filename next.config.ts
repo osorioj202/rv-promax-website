@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
   
   // 🚀 PERFORMANCE OPTIMIZATIONS
   experimental: {
-    optimizeCss: true, // Optimize CSS
+    // optimizeCss: true, // Disabled - causes critters module error in production
     optimizePackageImports: ['react', 'react-dom'], // Tree-shake unused code
   },
   
