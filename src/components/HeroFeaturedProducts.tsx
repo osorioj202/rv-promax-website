@@ -261,12 +261,12 @@ export default function HeroFeaturedProducts() {
                     <span className="text-xs sm:text-sm text-gray-700 font-semibold ml-1">(4.8)</span>
                   </div>
 
-                  {/* Amazon Button Premium */}
+                  {/* 🚀 ACCESSIBILITY: Amazon Button with improved contrast and touch area */}
                   <Link
                     href={product.amazonUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative inline-block w-full bg-gradient-to-r from-orange-500 via-orange-600 to-yellow-500 hover:from-orange-600 hover:via-yellow-500 hover:to-orange-500 text-white font-black py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 text-xs sm:text-sm shadow-[0_10px_30px_rgba(251,146,60,0.5)] hover:shadow-[0_15px_40px_rgba(251,146,60,0.7)] overflow-hidden group/btn"
+                    className="relative inline-block w-full bg-gradient-to-r from-orange-600 via-orange-700 to-yellow-600 hover:from-orange-700 hover:via-yellow-600 hover:to-orange-600 text-white font-black py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 text-xs sm:text-sm shadow-[0_10px_30px_rgba(251,146,60,0.5)] hover:shadow-[0_15px_40px_rgba(251,146,60,0.7)] overflow-hidden group/btn min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
                   >
                     {/* Efecto de brillo en el botón */}
                     <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></span>

@@ -56,7 +56,7 @@ export default function Home() {
     <>
       <main className="min-h-screen">
       {/* Enhanced Hero Section with Carousel */}
-      <section className="relative text-white min-h-screen overflow-hidden">
+      <section className="relative text-white min-h-screen overflow-hidden" role="banner" aria-label="Hero section">
         {/* Hero Carousel Background */}
         <HeroCarousel />
         
@@ -160,14 +160,14 @@ export default function Home() {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-teal-500 text-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-teal-500 text-white" aria-label="Featured products">
         <div className="max-w-7xl mx-auto">
           <HeroFeaturedProducts />
         </div>
       </section>
 
       {/* Featured Articles Section */}
-      <section id="featured-articles" className="py-20 px-6 bg-white">
+      <section id="featured-articles" className="py-20 px-6 bg-white" aria-label="Featured articles">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">

@@ -2,11 +2,12 @@
 
 import { useState } from 'react';
 
+// 🚀 ACCESSIBILITY: Improved contrast for better readability
 function Link({ href, children, className = '' }: { href: string; children: React.ReactNode; className?: string }) {
   return (
     <a
       href={href}
-      className={`text-gray-700 hover:text-blue-600 transition ${className}`}
+      className={`text-gray-800 hover:text-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-sm ${className}`}
     >
       {children}
     </a>
@@ -53,14 +54,15 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Hamburger Button - Mobile Only */}
+          {/* 🚀 ACCESSIBILITY: Improved hamburger button with better contrast and touch area */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-3 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
           >
             <svg
-              className="w-6 h-6 text-gray-700"
+              className="w-6 h-6 text-gray-800"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -111,19 +113,19 @@ export default function Header() {
         {isMobileMenuOpen && (
           <nav className="md:hidden mt-4 border-t border-gray-200 pt-4">
             <ul className="space-y-3">
-              <li><Link href="/" className="block py-2 text-gray-700 hover:text-blue-600 transition">Home</Link></li>
-              <li><Link href="/articles" className="block py-2 text-gray-700 hover:text-blue-600 transition">Articles</Link></li>
-              <li><Link href="/discovery" className="block py-2 font-semibold text-orange-600 hover:text-orange-700 transition">🔥 Discovery</Link></li>
-              <li><Link href="/general-rv" className="block py-2 text-gray-700 hover:text-blue-600 transition">General RV</Link></li>
-              <li><Link href="/rv-accessories" className="block py-2 text-gray-700 hover:text-blue-600 transition">RV Accessories</Link></li>
-              <li><Link href="/electrical-electronics" className="block py-2 text-gray-700 hover:text-blue-600 transition">Electrical & Electronics</Link></li>
-              <li><Link href="/camping-gear" className="block py-2 text-gray-700 hover:text-blue-600 transition">Camping Gear</Link></li>
-              <li><Link href="/maintenance-repair" className="block py-2 text-gray-700 hover:text-blue-600 transition">Maintenance & Repair</Link></li>
-              <li><Link href="/furniture-interior" className="block py-2 text-gray-700 hover:text-blue-600 transition">Furniture & Interior</Link></li>
-              <li><Link href="/towing-hitches" className="block py-2 text-gray-700 hover:text-blue-600 transition">Towing Hitches</Link></li>
-              <li><Link href="/mattresses-bedding" className="block py-2 text-gray-700 hover:text-blue-600 transition">Mattresses & Bedding</Link></li>
-              <li><Link href="/outdoor-recreation" className="block py-2 text-gray-700 hover:text-blue-600 transition">Outdoor Recreation</Link></li>
-              <li><Link href="/rv-covers-protection" className="block py-2 text-gray-700 hover:text-blue-600 transition">RV Covers & Protection</Link></li>
+              <li><Link href="/" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">Home</Link></li>
+              <li><Link href="/articles" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">Articles</Link></li>
+              <li><Link href="/discovery" className="block py-3 px-2 font-semibold text-orange-700 hover:text-orange-800 transition min-h-[44px] flex items-center">🔥 Discovery</Link></li>
+              <li><Link href="/general-rv" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">General RV</Link></li>
+              <li><Link href="/rv-accessories" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">RV Accessories</Link></li>
+              <li><Link href="/electrical-electronics" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">Electrical & Electronics</Link></li>
+              <li><Link href="/camping-gear" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">Camping Gear</Link></li>
+              <li><Link href="/maintenance-repair" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">Maintenance & Repair</Link></li>
+              <li><Link href="/furniture-interior" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">Furniture & Interior</Link></li>
+              <li><Link href="/towing-hitches" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">Towing Hitches</Link></li>
+              <li><Link href="/mattresses-bedding" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">Mattresses & Bedding</Link></li>
+              <li><Link href="/outdoor-recreation" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">Outdoor Recreation</Link></li>
+              <li><Link href="/rv-covers-protection" className="block py-3 px-2 text-gray-800 hover:text-blue-700 transition min-h-[44px] flex items-center">RV Covers & Protection</Link></li>
             </ul>
           </nav>
         )}
