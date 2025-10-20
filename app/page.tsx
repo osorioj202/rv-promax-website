@@ -114,7 +114,7 @@ export default function Home() {
                 <div className="text-4xl md:text-5xl font-bold text-white group-hover:text-teal-300 transition-colors">
                   RV-Pro Max
                 </div>
-                <div className="text-lg text-teal-200 -mt-1">
+                <div className="text-lg text-teal-100 -mt-1">
                   Expert Reviews & Guides
                 </div>
               </div>
@@ -135,7 +135,7 @@ export default function Home() {
             <span className="block text-teal-300">Expert Reviews</span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white/95">
             Discover the best RV accessories, camping gear, and off-grid solutions with our comprehensive guides. 
             Expert reviews, professional installation tips, and exclusive Amazon deals.
           </p>
@@ -159,17 +159,17 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 max-w-4xl mx-auto mb-12">
             <div className="flex items-center gap-2">
               <div className="text-2xl sm:text-3xl font-bold text-teal-300">100+</div>
-              <div className="text-sm opacity-80">Expert Guides</div>
+              <div className="text-sm text-white/90">Expert Guides</div>
             </div>
-            <div className="hidden sm:block w-px h-8 bg-white/30"></div>
+            <div className="hidden sm:block w-px h-8 bg-white/40"></div>
             <div className="flex items-center gap-2">
               <div className="text-2xl sm:text-3xl font-bold text-teal-300">60K+</div>
-              <div className="text-sm opacity-80">Happy Customers</div>
+              <div className="text-sm text-white/90">Happy Customers</div>
             </div>
-            <div className="hidden sm:block w-px h-8 bg-white/30"></div>
+            <div className="hidden sm:block w-px h-8 bg-white/40"></div>
             <div className="flex items-center gap-2">
               <div className="text-2xl sm:text-3xl font-bold text-teal-300">4.9/5</div>
-              <div className="text-sm opacity-80">Average Rating</div>
+              <div className="text-sm text-white/90">Average Rating</div>
             </div>
           </div>
 

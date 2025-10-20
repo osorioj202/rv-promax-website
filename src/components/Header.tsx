@@ -50,7 +50,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-bold text-blue-600 group-hover:text-teal-600 transition-colors">RV-Pro Max</span>
-              <span className="text-xs text-gray-500 -mt-1">Expert Reviews & Guides</span>
+              <span className="text-xs text-gray-700 -mt-1">Expert Reviews & Guides</span>
             </div>
           </Link>
 
