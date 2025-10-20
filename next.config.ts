@@ -19,22 +19,44 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['react', 'react-dom'], // Tree-shake unused code
   },
   
-  // 🚀 WEBPACK OPTIMIZATIONS
+  // 🚀 WEBPACK OPTIMIZATIONS - Optimized for production
   webpack: (config, { dev, isServer }) => {
     // Optimize bundle splitting
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
+        minSize: 20000,
+        maxSize: 244000,
         cacheGroups: {
+          // 🚀 CRITICAL: Separate articles JSON into async chunk
+          articles: {
+            test: /articles-comprehensive\.json/,
+            name: 'articles',
+            chunks: 'async',
+            priority: 30,
+            enforce: true,
+          },
+          // 🚀 CRITICAL: Separate discovery articles
+          discovery: {
+            test: /discovery-articles\.json/,
+            name: 'discovery',
+            chunks: 'async',
+            priority: 25,
+            enforce: true,
+          },
+          // Vendor libraries
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
+            priority: 20,
           },
+          // Common code
           common: {
             name: 'common',
             minChunks: 2,
             chunks: 'all',
+            priority: 10,
             enforce: true,
           },
         },
