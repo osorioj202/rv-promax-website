@@ -3,25 +3,42 @@
 import Link from 'next/link';
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import Head from 'next/head';
-import articles from '@/lib/articles-comprehensive.json';
+// 🚀 OPTIMIZED: Lazy loading instead of direct import
+// import articles from '@/lib/articles-comprehensive.json';
 import HeroCarousel from '@/components/HeroCarousel';
 import HeroFeaturedProducts from '@/components/HeroFeaturedProducts';
 import HeroSearch from '@/components/HeroSearch';
 
 export default function Home() {
   const [featuredArticles, setFeaturedArticles] = useState([]);
+  const [articles, setArticles] = useState([]);
+  const [isLoadingArticles, setIsLoadingArticles] = useState(true);
 
-  // 🚀 OPTIMIZED: Memoized article processing
-  const processedArticles = useMemo(() => {
-    return articles
-      .filter(article => article.monthlySearches > 0)
-      .sort((a, b) => b.monthlySearches - a.monthlySearches)
-      .slice(0, 6);
-  }, []);
-
+  // 🚀 OPTIMIZED: Lazy load articles JSON
   useEffect(() => {
-    setFeaturedArticles(processedArticles);
-  }, [processedArticles]);
+    const loadArticles = () => {
+      import('@/lib/articles-comprehensive.json')
+        .then(module => {
+          const articlesData = module.default;
+          setArticles(articlesData);
+          
+          // Process articles for featured section
+          const processed = articlesData
+            .filter(article => article.monthlySearches > 0)
+            .sort((a, b) => b.monthlySearches - a.monthlySearches)
+            .slice(0, 6);
+          
+          setFeaturedArticles(processed);
+          setIsLoadingArticles(false);
+        })
+        .catch(error => {
+          console.error('Error loading articles:', error);
+          setIsLoadingArticles(false);
+        });
+    };
+
+    loadArticles();
+  }, []);
 
   // 🚀 OPTIMIZED: Memoized icon functions
   const getCategoryIcon = useCallback((title: string) => {
@@ -179,7 +196,32 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredArticles.map((article, index) => (
+            {isLoadingArticles ? (
+              // 🚀 LOADING: Skeleton loading for articles
+              Array.from({ length: 6 }, (_, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden animate-pulse">
+                  <div className="p-8">
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
+                      <div className="flex-1">
+                        <div className="h-4 bg-gray-200 rounded mb-3 w-3/4"></div>
+                        <div className="h-6 bg-gray-200 rounded mb-3"></div>
+                      </div>
+                    </div>
+                    <div className="space-y-2 mb-6">
+                      <div className="h-3 bg-gray-200 rounded"></div>
+                      <div className="h-3 bg-gray-200 rounded w-5/6"></div>
+                      <div className="h-3 bg-gray-200 rounded w-4/6"></div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="h-4 bg-gray-200 rounded w-1/3"></div>
+                      <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              featuredArticles.map((article, index) => (
               <article
                 key={article.slug}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden article-card"
@@ -224,7 +266,8 @@ export default function Home() {
                   </div>
                 </Link>
               </article>
-            ))}
+              ))
+            )}
           </div>
           
           <div className="text-center mt-12">
