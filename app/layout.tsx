@@ -197,7 +197,7 @@ function Link({ href, children, className = '' }: { href: string; children: Reac
   return (
     <a
       href={href}
-      className={`text-gray-700 hover:text-blue-600 transition ${className}`}
+      className={`text-gray-300 hover:text-white transition focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-sm ${className}`}
     >
       {children}
     </a>

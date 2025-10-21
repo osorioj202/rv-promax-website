@@ -160,9 +160,9 @@ export default function HeroFeaturedProducts() {
     <div className="relative w-full max-w-6xl mx-auto">
       {/* Section Header */}
       <div className="text-center mb-8">
-        <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
           🔥 Featured Products
-        </h3>
+        </h2>
         <p className="text-white/80 text-sm md:text-base">
           Top-rated products with exclusive discounts
         </p>
@@ -315,13 +315,19 @@ export default function HeroFeaturedProducts() {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center ${
+              className={`w-11 h-11 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 ${
                 index === currentIndex 
                   ? 'bg-white scale-125' 
                   : 'bg-white/50 hover:bg-white/75'
               }`}
               aria-label={`Go to slide ${index + 1}`}
-            />
+            >
+              <div className={`w-3 h-3 rounded-full ${
+                index === currentIndex 
+                  ? 'bg-blue-600' 
+                  : 'bg-white/70'
+              }`} />
+            </button>
           ))}
         </div>
       )}
