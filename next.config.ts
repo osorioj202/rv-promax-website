@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
   // 🚀 PERFORMANCE OPTIMIZATIONS
   experimental: {
     // optimizeCss: true, // Disabled - causes critters module error in production
-    optimizePackageImports: ['react', 'react-dom'], // Tree-shake unused code
+    optimizePackageImports: ['react', 'react-dom', 'next', 'next/image', 'next/link'], // Tree-shake unused code
   },
   
   // 🚀 WEBPACK OPTIMIZATIONS - Optimized for production
@@ -44,6 +44,30 @@ const nextConfig: NextConfig = {
             priority: 25,
             enforce: true,
           },
+          // 🚀 OPTIMIZED: Separate Google Analytics/Tag Manager
+          analytics: {
+            test: /[\\/]node_modules[\\/](gtag|google-analytics|googletagmanager)/,
+            name: 'analytics',
+            chunks: 'async',
+            priority: 25,
+            enforce: true,
+          },
+          // 🚀 OPTIMIZED: Separate React libraries
+          react: {
+            test: /[\\/]node_modules[\\/](react|react-dom)/,
+            name: 'react',
+            chunks: 'all',
+            priority: 22,
+            enforce: true,
+          },
+          // 🚀 OPTIMIZED: Separate Next.js libraries
+          nextjs: {
+            test: /[\\/]node_modules[\\/]next/,
+            name: 'nextjs',
+            chunks: 'all',
+            priority: 21,
+            enforce: true,
+          },
           // Vendor libraries
           vendor: {
             test: /[\\/]node_modules[\\/]/,
@@ -61,6 +85,10 @@ const nextConfig: NextConfig = {
           },
         },
       };
+      
+      // 🚀 OPTIMIZED: Enable tree shaking for better performance
+      config.optimization.usedExports = true;
+      config.optimization.sideEffects = false;
     }
     return config;
   },

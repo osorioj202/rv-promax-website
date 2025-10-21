@@ -135,12 +135,12 @@ export default function RootLayout({
           <Footer />
         </div>
         
-        {/* 🚀 OPTIMIZED Google Analytics - After interactive for better performance */}
+        {/* 🚀 OPTIMIZED Google Analytics - Lazy loading for better performance */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NWNG00LNYB"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

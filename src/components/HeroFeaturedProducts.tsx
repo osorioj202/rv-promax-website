@@ -199,8 +199,10 @@ export default function HeroFeaturedProducts() {
                       fill
                       className="object-contain drop-shadow-2xl group-hover:scale-125 group-hover:rotate-3 transition-all duration-500"
                       loading="lazy"
-                      quality={75}
+                      quality={70}
                       sizes="(max-width: 640px) 112px, 128px"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAEBA/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMAAAIRAxAPwCdABmX/9k="
                     />
                   </div>
                   
