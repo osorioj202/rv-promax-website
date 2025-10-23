@@ -48,6 +48,23 @@
   .category-button:hover {
     @apply border-blue-300 bg-blue-50;
   }
+
+  /* Product Highlight Cards */
+  .product-highlight {
+    @apply bg-gray-50 border-2 border-gray-200 p-5 my-5 rounded-lg;
+  }
+  
+  .price-tag {
+    @apply bg-green-500 text-white px-3 py-1 rounded-full font-bold inline-block my-2;
+  }
+  
+  .pro-tip {
+    @apply bg-green-50 border-l-4 border-green-500 p-4 my-5 rounded;
+  }
+  
+  .warning {
+    @apply bg-yellow-50 border-l-4 border-yellow-500 p-4 my-5 rounded;
+  }
   
   /* Loading States */
   .loading-skeleton {
