@@ -98,7 +98,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         }}
       />
 
-      <main className="max-w-4xl mx-auto py-12 px-6">
+      <main className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb navigation */}
         <nav className="text-sm text-gray-500 mb-6">
           <a href="/" className="hover:text-blue-600">Home</a>
@@ -143,8 +143,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
         {/* Products section */}
         {article.products && article.products.length > 0 && (
-          <section className="mt-16 bg-white rounded-lg p-8 shadow border">
-            <h2 className="text-2xl font-bold text-center mb-6">
+          <section className="mt-16 bg-white rounded-lg p-4 sm:p-6 md:p-8 shadow border">
+            <h2 className="text-xl sm:text-2xl font-bold text-center mb-6">
               🛒 Expert-Recommended Products on Amazon
             </h2>
             <p className="text-center text-gray-600 mb-8">
@@ -174,7 +174,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
         {/* Related articles section */}
         <section className="mt-16">
-          <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mb-6">Related Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {articles
               .filter(a => a.slug !== slug && a.category === article.category)

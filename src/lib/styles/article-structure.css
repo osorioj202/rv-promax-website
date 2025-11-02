@@ -1051,34 +1051,155 @@ tr:hover {
 @media (max-width: 768px) {
   .article-content {
     padding: 1rem;
+    max-width: 100%;
   }
   
-  .article-content h1:first-of-type {
-  font-size: 2rem;
-    padding: 2rem 1.5rem;
+  /* Main title responsive */
+  .article-content h1:first-of-type,
+  .article-content .main-title {
+    font-size: 1.75rem !important;
+    padding: 1.5rem 1rem !important;
+    margin: 0 0 1.5rem 0 !important;
   }
   
-  .article-content h2 {
-    font-size: 1.5rem;
-    padding: 1rem 1.25rem;
+  /* Subtitle responsive */
+  .article-content .subtitle {
+    font-size: 1.3rem !important;
+    padding: 1rem !important;
+    margin: 1rem 0 1.5rem 0 !important;
   }
   
-.article-content h3 {
-    font-size: 1.25rem;
-    padding: 0.875rem 1rem;
+  /* Section headings responsive */
+  .article-content h2,
+  .article-content .section-heading {
+    font-size: 1.3rem !important;
+    padding: 1rem !important;
+    margin: 2rem 0 1rem 0 !important;
   }
   
+  /* Subsection headings responsive */
+  .article-content h3,
+  .article-content .subsection-heading {
+    font-size: 1.1rem !important;
+    padding: 0.75rem 0.5rem !important;
+    margin: 1.5rem 0 0.75rem 0 !important;
+  }
+  
+  /* Paragraphs responsive */
+  .article-content p,
+  .article-content .article-paragraph {
+    font-size: 1rem !important;
+    margin: 1rem 0 !important;
+  }
+  
+  /* Tables responsive */
   .article-content table {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
   
   .article-content th,
   .article-content td {
-    padding: 0.875rem 0.75rem;
+    padding: 0.75rem 0.5rem;
   }
   
-  .article-content li {
-    padding: 0.875rem 1rem;
+  /* Lists responsive */
+  .article-content ul,
+  .article-content ol {
+    margin: 1rem 0 !important;
+  }
+  
+  .article-content li,
+  .article-list-item {
+    padding: 0.75rem 0.75rem !important;
+    margin: 0.5rem 0 !important;
+    font-size: 0.95rem !important;
+  }
+  
+  /* Blockquotes responsive */
+  .article-content blockquote {
+    padding: 1rem !important;
+    margin: 1.5rem 0 !important;
+  }
+  
+  /* Images responsive */
+  .article-content img {
+    margin: 1.5rem 0 !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Amazon links responsive */
+  .article-content a[href*="amazon"],
+  .article-content a[href*="amzn.to"],
+  .article-content .cta-link {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Product recommendations responsive */
+  .article-content .product-recommendation {
+    padding: 1.25rem !important;
+    margin: 1.5rem 0 !important;
+  }
+  
+  /* FAQ responsive */
+  .article-content .faq-question,
+  .article-content .faq-answer {
+    padding-left: 0.5rem !important;
+    font-size: 0.95rem !important;
+  }
+  
+  /* Code responsive */
+  .article-content code {
+    font-size: 0.8rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+  
+  /* Grid utilities responsive */
+  .contaminant-list,
+  .factor-grid,
+  .maintenance-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Remove emojis from section headings on mobile */
+  .article-content .section-heading::before,
+  .article-content h2::before,
+  .article-content .subsection-heading::before,
+  .article-content h3::before {
+    display: none !important;
+  }
+}
+
+/* Tablet responsive (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .article-content {
+    padding: 1.5rem;
+  }
+  
+  .article-content .main-title {
+    font-size: 2rem !important;
+    padding: 2rem 1.5rem !important;
+  }
+  
+  .article-content .subtitle {
+    font-size: 1.5rem !important;
+  }
+  
+  .article-content .section-heading {
+    font-size: 1.5rem !important;
+  }
+  
+  .article-content .subsection-heading {
+    font-size: 1.25rem !important;
+  }
+  
+  .article-content p {
+    font-size: 1.05rem !important;
   }
 }
 
