@@ -99,21 +99,53 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         }}
       />
 
-      <main className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        {/* Featured Image Hero (if exists) */}
+      {/* Hero Image - Full Width */}
+      <div className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] bg-gradient-to-br from-blue-600 to-teal-600">
         {(article as any).featuredImage && (
-          <div className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] mb-12 rounded-2xl overflow-hidden shadow-2xl">
-            <Image
-              src={(article as any).featuredImage}
-              alt={article.title}
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-          </div>
+          <Image
+            src={(article as any).featuredImage}
+            alt={article.title}
+            fill
+            className="object-cover opacity-90"
+            priority
+          />
         )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         
+        {/* Article Header on Image */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 lg:p-12">
+          <div className="max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="mb-4">
+              <span className="inline-block px-4 py-2 bg-blue-600 rounded-full text-sm font-bold text-white">
+                {article.category}
+              </span>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+              {article.title}
+            </h1>
+
+            {/* Meta */}
+            <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm md:text-base text-white/90">
+              {article.wordCount && (
+                <>
+                  <span>{article.wordCount.toLocaleString()} words</span>
+                  <span className="hidden sm:inline">•</span>
+                </>
+              )}
+              {article.monthlySearches && (
+                <>
+                  <span>{article.monthlySearches.toLocaleString()} monthly searches</span>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb navigation */}
         <nav className="text-sm text-gray-500 mb-6">
           <a href="/" className="hover:text-blue-600">Home</a>
@@ -122,26 +154,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <span className="mx-2">→</span>
           <span className="text-gray-700">{article.title}</span>
         </nav>
-
-        {/* Article header */}
-        <header className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {article.title}
-          </h1>
-          
-          {/* Article meta information */}
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
-            <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">
-              {article.category}
-            </span>
-            {article.wordCount && (
-              <span>{article.wordCount.toLocaleString()} words</span>
-            )}
-            {article.monthlySearches && (
-              <span>{article.monthlySearches.toLocaleString()} monthly searches</span>
-            )}
-          </div>
-        </header>
 
         {/* Article content */}
         <article
