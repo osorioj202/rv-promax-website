@@ -1,6 +1,7 @@
 // app/articles/[slug]/page.tsx
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import articles from '@/lib/articles-comprehensive.json';
 import ProductCard from '@/components/ProductCard';
 import AdSenseArticle from '@/components/AdSense';
@@ -99,6 +100,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       />
 
       <main className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        {/* Featured Image Hero (if exists) */}
+        {(article as any).featuredImage && (
+          <div className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] mb-12 rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src={(article as any).featuredImage}
+              alt={article.title}
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+          </div>
+        )}
+        
         {/* Breadcrumb navigation */}
         <nav className="text-sm text-gray-500 mb-6">
           <a href="/" className="hover:text-blue-600">Home</a>
