@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useMemo } from 'react';
 import articles from '@/lib/articles-comprehensive.json';
 
@@ -198,49 +199,54 @@ export default function ArticlesPage() {
               {filteredArticles.map((article) => (
                 <article
                   key={article.slug}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden article-card"
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden article-card group"
                 >
                   <Link href={`/articles/${article.slug}`} className="block h-full">
-                    {/* Article Header */}
-                    <div className="p-6 pb-4">
-                      <div className="flex items-start gap-3 mb-4">
-                        <div className="text-3xl">{getArticleIcon(article.title)}</div>
-                        <div className="flex-1">
-                          <h2 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2 leading-tight">
-                            {article.title}
-                          </h2>
-                          <div className="flex items-center gap-2 text-sm text-gray-500">
-                            <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
-                              {article.targetKeyword}
-                            </span>
-                            <span className="text-gray-400">•</span>
-                            <span>{article.monthlySearches.toLocaleString()}/mo</span>
-                          </div>
+                    {/* Image */}
+                    {(article as any).featuredImage ? (
+                      <div className="relative h-64 overflow-hidden">
+                        <Image
+                          src={(article as any).featuredImage}
+                          alt={article.title}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                        {/* Badge over image */}
+                        <div className="absolute top-4 left-4">
+                          <span className="inline-block px-3 py-1 bg-blue-600 rounded-full text-xs font-bold text-white">
+                            {article.category}
+                          </span>
                         </div>
                       </div>
+                    ) : (
+                      <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden flex items-center justify-center">
+                        <div className="text-6xl">{getArticleIcon(article.title)}</div>
+                        {/* Badge over fallback */}
+                        <div className="absolute top-4 left-4">
+                          <span className="inline-block px-3 py-1 bg-blue-600 rounded-full text-xs font-bold text-white">
+                            {article.category}
+                          </span>
+                        </div>
+                      </div>
+                    )}
 
-                      {/* Article Preview */}
-                      <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed">
+                    {/* Content */}
+                    <div className="p-6">
+                      <h2 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+                        {article.title}
+                      </h2>
+                      <p className="text-gray-600 mb-4 line-clamp-3">
                         Expert guide covering everything you need to know about {article.targetKeyword} for RV owners. 
                         Complete with product recommendations, installation tips, and maintenance advice.
                       </p>
-                    </div>
 
-                    {/* Article Footer */}
-                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
-                      <div className="flex items-center justify-between text-sm text-gray-500">
-                        <div className="flex items-center gap-4">
-                          <span className="flex items-center gap-1">
-                            📖 Expert Guide
-                          </span>
-                          <span className="flex items-center gap-1">
-                            ⭐ 4.9/5 Rating
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-1 text-blue-600 font-medium">
+                      {/* Meta */}
+                      <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t border-gray-100">
+                        <span>{article.monthlySearches.toLocaleString()}/mo</span>
+                        <span className="flex items-center gap-1 text-blue-600 font-medium">
                           Read More
                           <span>→</span>
-                        </div>
+                        </span>
                       </div>
                     </div>
                   </Link>
